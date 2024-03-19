@@ -42,7 +42,7 @@ Antes de usar SSR para tu aplicación, la primera pregunta que debes hacerte es 
 
 SSG conserva las mismas características de rendimiento de las aplicaciones SSR: proporciona un gran rendimiento en el tiempo de acceso al contenido. Al mismo tiempo, es más barato y fácil de implementar que las aplicaciones SSR porque la salida es HTML estático y los recursos. La palabra clave aquí es **estático**: SSG solo se puede aplicar a páginas que consumen datos estáticos; es decir, datos que se conocen en el momento de la compilación y que no cambian entre despliegues. Cada vez que los datos cambian, se necesita un nuevo despliegue.
 
-Si solo estás investigando SSR para mejorar el SEO de un puñado de páginas de marketing (por ejemplo, `/`, `/about`, `/contact`, etc.), entonces probablemente deseas SSG en lugar de SSR. SSG también es excelente para sitios web basados ​​en contenido, como sitios de documentación o blogs. De hecho, este sitio web que estás leyendo en este momento se genera estáticamente utilizando [VitePress](https://vitepress.vuejs.org/), un generador de sitios estáticos con tecnología de Vue.
+Si solo estás investigando SSR para mejorar el SEO de un puñado de páginas de marketing (por ejemplo, `/`, `/about`, `/contact`, etc.), entonces probablemente deseas SSG en lugar de SSR. SSG también es excelente para sitios web basados ​​en contenido, como sitios de documentación o blogs. De hecho, este sitio web que estás leyendo en este momento se genera estáticamente utilizando [VitePress](https://vitepress.dev/), un generador de sitios estáticos con tecnología de Vue.
 
 ## Tutorial Básico {#basic-tutorial}
 

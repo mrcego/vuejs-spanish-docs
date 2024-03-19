@@ -47,7 +47,7 @@ Hay dos tipos de SSG: de una sola página y de varias páginas. Ambos favorecen 
 
 Los SSG de una sola página son más adecuados si se espera una interactividad no trivial, sesiones de gran duración o persistencia de elementos/estado a través de las navegaciones. De lo contrario, los SSG multipágina serían la mejor opción.
 
-El equipo de Vue también mantiene un generador de sitios estáticos llamado [VitePress](https://vitepress.vuejs.org/), que hace funcionar este sitio web que estás leyendo ahora mismo. VitePress soporta ambos tipos de SSG. [Nuxt](https://v3.nuxtjs.org/) también soporta SSG. Incluso puedes mezclar SSR y SSG para diferentes rutas en la misma aplicación Nuxt.
+El equipo de Vue también mantiene un generador de sitios estáticos llamado [VitePress](https://vitepress.dev/), que hace funcionar este sitio web que estás leyendo ahora mismo. VitePress soporta ambos tipos de SSG. [Nuxt](https://v3.nuxtjs.org/) también soporta SSG. Incluso puedes mezclar SSR y SSG para diferentes rutas en la misma aplicación Nuxt.
 
 ## Más Allá de la Web {#beyond-the-web}
 

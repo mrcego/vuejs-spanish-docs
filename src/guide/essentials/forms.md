@@ -341,7 +341,7 @@ export default {
 
 ```vue-html
 <select v-model="selected">
-  <option v-for="option in options" :value="option.value">
+  <option v-for="option in options" :key="option.value" :value="option.value">
     {{ option.text }}
   </option>
 </select>
@@ -446,7 +446,7 @@ Si el valor no puede ser procesado con `parseFloat()`, entonces se utiliza el va
 
 El modificador `number` se aplica automáticamente si la entrada tiene `type="number"`.
 
-### `.trim` 
+### `.trim`
 
 Si quieres que los espacios en blanco de la entrada del usuario se recorten automáticamente, puedes añadir el modificador `trim` a tus entradas gestionadas por `v-model`:
 
@@ -454,7 +454,7 @@ Si quieres que los espacios en blanco de la entrada del usuario se recorten auto
 <input v-model.trim="msg" />
 ```
 
-## `v-model` con Componentes 
+## `v-model` con Componentes
 
 > Si aún no estás familiarizado con los componentes de Vue, puedes saltarte esto por ahora.
 

@@ -3,8 +3,12 @@
 :::danger Característica Experimental Obsoleta
 La Transformación de la Reactividad era una función experimental y ha quedado obsoleta. Por favor, lea sobre [el razonamiento aquí](https://github.com/vuejs/rfcs/discussions/369#discussioncomment-5059028).
 
-Eventualmente será elimidada del núcleo de Vue en una futura versión menor. Si todavía quieres usarlo, ahora está disponible a través del plugin [Vue Macros](https://vue-macros.sxzz.moe/features/reactivity-transform.html).
-:::
+Eventualmente será elimidada del núcleo de Vue en una futura versión menor.
+
+- Para migrar lejos de él, consulta esta [herramienta de línea de comandos](https://github.com/edison1105/drop-reactivity-transform) que puede automatizar el proceso.
+- Si aún tienes la intención de usarlo, ahora está disponible a través del complemento [Vue Macros](https://vue-macros.sxzz.moe/features/reactivity-transform.html).
+
+::
 
 :::tip Específica de la Composition API
 La Transformación de la Reactividad es una característica específica de la Composition-API y requiere un paso de compilación.

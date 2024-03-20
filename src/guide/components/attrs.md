@@ -79,21 +79,6 @@ Si **no** quieres que un componente herede automáticamente los atributos, puede
 
 <div class="composition-api">
 
-Si se utiliza `<script setup>`, se deberá declarar esta opción utilizando un bloque `<script>` separado y normal:
-
-```vue
-<script>
-// usar un <script> normal para declarar las opciones
-export default {
-  inheritAttrs: false
-}
-</script>
-
-<script setup>
-// ...lógica del setup
-</script>
-```
-
 Desde la versión 3.3 puedes usar también `defineOptions` directamente en `<script setup`:
 
 ```vue
@@ -101,7 +86,7 @@ Desde la versión 3.3 puedes usar también `defineOptions` directamente en `<scr
 defineOptions({
   inheritAttrs: false
 })
-// ...setup logic
+// ...lógica del bloque setup
 </script>
 ```
 

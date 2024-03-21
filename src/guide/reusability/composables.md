@@ -94,13 +94,13 @@ Por ejemplo, podemos extraer la lógica de añadir y eliminar un escuchador de e
 
 ```js
 // event.js
-import { onMounted, onBeforeUnmount } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 
 export function useEventListener(target, event, callback) {
   // si lo deseas, también puedes hacer que este
   // soporte selectores string como objetivo
   onMounted(() => target.addEventListener(event, callback))
-  onBeforeUnmount(() => target.removeEventListener(event, callback))
+  onUnmounted(() => target.removeEventListener(event, callback))
 }
 ```
 

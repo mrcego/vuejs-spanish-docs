@@ -112,7 +112,7 @@ Observa que la interpolación dentro del `<textarea>` no funcionará. En su luga
 <textarea v-model="text"></textarea>
 ```
 
-### Checkbox {#checkbox-1}
+### Checkbox {#checkbox}
 
 Un único checkbox, con valor booleano:
 

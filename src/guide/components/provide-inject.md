@@ -208,8 +208,10 @@ const value = inject('message', 'default value')
 En algunos casos, puede ser necesario crear el valor por defecto llamando a una función o instanciando una nueva clase. Para evitar cálculos innecesarios o efectos secundarios en caso de que no se utilice el valor opcional, podemos utilizar una factory function para crear el valor por defecto:
 
 ```js
-const value = inject('key', () => new ExpensiveClass())
+const value = inject('key', () => new ExpensiveClass(), true)
 ```
+
+El tercer parámetro indica que el valor por defecto debe tratarse como una función de fábrica.
 
 </div>
 
@@ -351,7 +353,7 @@ import { myInjectionKey } from './keys.js'
 const injected = inject(myInjectionKey)
 ```
 
-Mira también: [Escritura de Provide / Inject](/guide/typescript/composition-api#typing-provide-inject) <sup class="vt-badge ts" />
+Véase también: [Escritura de Provide / Inject](/guide/typescript/composition-api#typing-provide-inject) <sup class="vt-badge ts" />
 
 </div>
 

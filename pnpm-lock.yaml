@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   '@vue/repl':
-    specifier: ^1.4.1
+    specifier: ^1.5.0
     version: 1.5.0(vue@3.3.4)
   '@vue/theme':
     specifier: ^2.2.3
@@ -918,12 +918,6 @@ packages:
     resolution: {integrity: sha512-kLTDLwd0B1jG08NBF3R5rqULtv/f8x3rOFByTDz4J53ttIQEDmALqKqXY0J+XQeN0aV2FBxY8nJDf88yvOPAqQ==}
     dependencies:
       '@vue/shared': 3.3.4
-    dev: false
-
-  /@vue/reactivity@3.4.21:
-    resolution: {integrity: sha512-UhenImdc0L0/4ahGCyEzc/pZNwVgcglGy9HVzJ1Bq2Mm9qXOpP8RyNTjookw/gOCUlXSEtuZ2fUg5nrHcoqJcw==}
-    dependencies:
-      '@vue/shared': 3.4.21
     dev: false
 
   /@vue/repl@1.5.0(vue@3.3.4):

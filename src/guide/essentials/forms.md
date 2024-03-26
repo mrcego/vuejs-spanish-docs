@@ -403,7 +403,7 @@ Pero en ocasiones podemos querer vincular el valor a una propiedad dinámica de 
 Los atributos `true-value` y `false-value` no afectan al atributo `value` de la entrada, porque los navegadores no incluyen las casillas sin marcar en los envíos de formularios. Para garantizar que uno de los dos valores se envíe en un formulario (por ejemplo, "sí" o "no"), utiliza entradas de radio en su lugar.
 :::
 
-### Radio {#radio-1}
+### Radio {#radio}
 
 ```vue-html
 <input type="radio" v-model="pick" :value="primero" />

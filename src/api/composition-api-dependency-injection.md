@@ -64,9 +64,9 @@ Inyecta un valor proporcionado por un componente de nivel superior o por la apli
 
 - **Detalles**
 
-  El primer argumento es la clave de inyección. Vue recorrerá la estructura padre para ubicar un valor proporcionado con una clave coincidente. Si varios componentes de la estructura padre proporcionan la misma clave, el más cercano al componente que inyecta reemplazará a los que están más arriba en la cadena. Si no se encuentra un valor con una clave coincidente, `inject()` devuelve `undefined` a menos que se proporcione un valor predeterminado.
+  El primer argumento es la clave de inyección. Vue recorrerá la estructura padre para ubicar un valor proporcionado con una clave que coincida. Si varios componentes de la estructura padre proporcionan la misma clave, el más cercano al componente que inyecta reemplazará a los que están más arriba en la cadena. Si no se encuentra un valor con una clave que coincida, `inject()` devuelve `undefined` a menos que se proporcione un valor predeterminado.
 
-  El segundo argumento es opcional y es el valor predeterminado que se utilizará cuando no se encuentre ningún valor coincidente. También puede ser una función de fábrica para devolver valores que son costosos de crear. Si el valor predeterminado es una función, entonces se debe pasar `false` como tercer argumento para indicar que la función debe utilizarse como el valor en lugar de la función de fábrica.
+  El segundo argumento es opcional y es el valor predeterminado que se utilizará cuando no se encuentre ningún valor que coincida. También puede ser una función de fábrica para devolver valores que son costosos de crear. Si el valor predeterminado es una función, entonces se debe pasar `false` como tercer argumento para indicar que la función debe utilizarse como el valor en lugar de la función de fábrica.
 
   Al igual que las APIs de registro de los hooks de ciclo de vida, `inject()` debe ser llamado de manera sincrónica durante la fase `setup()` de un componente.
 

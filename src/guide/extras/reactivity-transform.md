@@ -5,8 +5,8 @@ La Transformación de la Reactividad era una función experimental y ha quedado 
 
 Eventualmente será elimidada del núcleo de Vue en una futura versión menor.
 
-- Para migrar lejos de él, consulta esta [herramienta de línea de comandos](https://github.com/edison1105/drop-reactivity-transform) que puede automatizar el proceso.
-- Si aún tienes la intención de usarlo, ahora está disponible a través del complemento [Vue Macros](https://vue-macros.sxzz.moe/features/reactivity-transform.html).
+- Para migrar fuera de ella, consulta esta [herramienta de línea de comandos](https://github.com/edison1105/drop-reactivity-transform) que puede automatizar el proceso.
+- Si aún tienes la intención de usarlo, ahora está disponible a través del plugin [Vue Macros](https://vue-macros.sxzz.moe/features/reactivity-transform.html).
 
 ::
 

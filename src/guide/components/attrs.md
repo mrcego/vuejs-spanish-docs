@@ -96,7 +96,7 @@ Desde la versión 3.3 puedes usar también `defineOptions` directamente en `<scr
 defineOptions({
   inheritAttrs: false
 })
-// ...setup logic
+// ...lógica del bloque setup
 </script>
 ```
 

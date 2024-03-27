@@ -112,7 +112,7 @@ Observa que la interpolación dentro del `<textarea>` no funcionará. En su luga
 <textarea v-model="text"></textarea>
 ```
 
-### Checkbox {#checkbox-1}
+### Checkbox {#checkbox}
 
 Un único checkbox, con valor booleano:
 
@@ -199,7 +199,7 @@ En este caso, el array `checkedNames` siempre contendrá los valores de las casi
 
 </div>
 
-### Radio {#radio-1}
+### Radio {#radio}
 
 ```vue-html
 <div>Seleccionado: {{ picked }}</div>
@@ -341,7 +341,7 @@ export default {
 
 ```vue-html
 <select v-model="selected">
-  <option v-for="option in options" :value="option.value">
+  <option v-for="option in options" :key="option.value" :value="option.value">
     {{ option.text }}
   </option>
 </select>
@@ -379,7 +379,7 @@ En las opciones radio, checkbox y select, los valores de enlace del `v-model` su
 
 Pero en ocasiones podemos querer vincular el valor a una propiedad dinámica de la instancia activa actual. Para ello podemos utilizar `v-bind`. Además, el uso de `v-bind` nos permite vincular el valor de entrada a valores que no son de cadena.
 
-### Checkbox {#select-options}
+### Checkbox {#checkbox-1}
 
 ```vue-html
 <input
@@ -403,7 +403,7 @@ Pero en ocasiones podemos querer vincular el valor a una propiedad dinámica de 
 Los atributos `true-value` y `false-value` no afectan al atributo `value` de la entrada, porque los navegadores no incluyen las casillas sin marcar en los envíos de formularios. Para garantizar que uno de los dos valores se envíe en un formulario (por ejemplo, "sí" o "no"), utiliza entradas de radio en su lugar.
 :::
 
-### Radio {#modifiers}
+### Radio {#radio-1}
 
 ```vue-html
 <input type="radio" v-model="pick" :value="primero" />
@@ -412,7 +412,7 @@ Los atributos `true-value` y `false-value` no afectan al atributo `value` de la 
 
 `pick` se establecerá con el valor de `primero` cuando se marque la primera entrada de radio, y se establecerá con el valor de `segundo` cuando se marque la segunda.
 
-### Seleccionar Opciones {#lazy}
+### Opciones de Select {#select-options}
 
 ```vue-html
 <select v-model="selected">
@@ -423,9 +423,9 @@ Los atributos `true-value` y `false-value` no afectan al atributo `value` de la 
 
 `v-model` admite también la vinculación de valores que no sean cadenas. En el ejemplo anterior, cuando se selecciona la opción, `selected` se establecerá en el valor literal del objeto de `{ number: 123 }`.
 
-## Modificadores {#number}
+## Modificadores {#modifiers}
 
-### `.lazy` {#trim}
+### `.lazy` {#lazy}
 
 Por defecto, `v-model` sincroniza la entrada con los datos después de cada evento `input` (con la excepción de la composición IME, como se ha indicado [anteriormente](#vmodel-ime-tip)). Puedes añadir el modificador `lazy` para sincronizar después de los eventos `change`:
 
@@ -434,7 +434,7 @@ Por defecto, `v-model` sincroniza la entrada con los datos después de cada even
 <input v-model.lazy="msg" />
 ```
 
-### `.number` {#v-model-with-components}
+### `.number` {#number}
 
 Si quieres que la entrada del usuario sea automáticamente tipificada como un número, puedes añadir el modificador `number` a tus entradas gestionadas por `v-model`:
 
@@ -446,7 +446,7 @@ Si el valor no puede ser procesado con `parseFloat()`, entonces se utiliza el va
 
 El modificador `number` se aplica automáticamente si la entrada tiene `type="number"`.
 
-### `.trim` 
+### `.trim` {#trim}
 
 Si quieres que los espacios en blanco de la entrada del usuario se recorten automáticamente, puedes añadir el modificador `trim` a tus entradas gestionadas por `v-model`:
 
@@ -454,7 +454,7 @@ Si quieres que los espacios en blanco de la entrada del usuario se recorten auto
 <input v-model.trim="msg" />
 ```
 
-## `v-model` con Componentes 
+## `v-model` con Componentes {#v-model-with-components}
 
 > Si aún no estás familiarizado con los componentes de Vue, puedes saltarte esto por ahora.
 

@@ -85,7 +85,7 @@ Escribir documentación es un ejercicio de empatía. No estamos describiendo una
 
 ### Consejos, Llamadas, Alertas y Destacados de Línea
 
-Tenemos algunos estilos dedicados para denotar algo que vale la pena resaltar de una manera particular. Estos están agrupados [en esta página](https://vitepress.vuejs.org/guide/markdown.html#custom-containers). **Deben usarse con moderación.**
+Tenemos algunos estilos dedicados para denotar algo que vale la pena resaltar de una manera particular. Estos están agrupados [en esta página](https://vitepress.dev/guide/markdown#custom-containers). **Deben usarse con moderación.**
 
 Existe una cierta tentación de abusar de estos estilos, ya que uno puede simplemente agregar un cambio dentro de una llamada. Sin embargo, esto rompe el flujo de lectura para el usuario y solo debe usarse en circunstancias especiales. Siempre que sea posible, debemos intentar crear una narrativa y flujo dentro de la página para respetar la carga cognitiva del lector.
 

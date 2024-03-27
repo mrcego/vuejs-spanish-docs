@@ -40,7 +40,7 @@ Toma un valor interno y devuelve un objeto ref reactivo y mutable, que tiene una
   ```
 
 - **Véase también**
-  - [Guía - Fundamentos de reactividad con `ref()`](/guide/essentials/reactivity-fundamentals#ref)
+  - [Guía - Fundamentos de Reactividad con `ref()`](/guide/essentials/reactivity-fundamentals#ref)
   - [Guía - Escritura de `ref()`](/guide/typescript/composition-api#typing-ref)
 
 ## computed() {#computed}

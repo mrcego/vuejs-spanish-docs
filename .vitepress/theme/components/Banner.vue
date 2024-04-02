@@ -25,7 +25,7 @@ function dismiss() {
     <p class="vt-banner-text">
       <span class="vt-text-primary">VueConf Toronto</span>
       <span class="vt-tagline"> - Únete a la conferencia principal de Vue.js</span>
-      | 9-10 Nov 2023 <span class="vt-place"> - Toronto, Canada</span>
+      | 9-10 Nov 2023 <span class="vt-place"> - Toronto, Canadá</span>
       <a
         target="_blank"
         class="vt-primary-action"

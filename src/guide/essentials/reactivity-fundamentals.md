@@ -519,7 +519,7 @@ En el siguiente ejemplo, `count` y `object` son propiedades de nivel superior, p
 
 ```js
 const count = ref(0)
-const object = { id: ref(0) }
+const object = { id: ref(1) }
 ```
 
 Por lo tanto, esta expresión funciona como es esperado:

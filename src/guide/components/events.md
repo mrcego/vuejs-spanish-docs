@@ -177,7 +177,7 @@ export default {
 
 </div>
 
-La opción `emits` también admite una sintaxis de objeto, que nos permite realizar una validación en tiempo de ejecución del payload de los eventos emitidos:
+La opción `emits` y el macro `defineEmits()` también admiten una sintaxis de objeto, que nos permite realizar una validación en tiempo de ejecución del payload de los eventos emitidos:
 
 <div class="composition-api">
 

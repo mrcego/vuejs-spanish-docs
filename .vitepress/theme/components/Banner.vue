@@ -30,7 +30,7 @@ function dismiss() {
         target="_blank"
         class="vt-primary-action"
         href="https://vuetoronto.com?utm_source=vuejs&utm_content=top_banner"
-        ><span class="vt-time-now">Ver</span> Horario</a
+        >Regístrate <span class="vt-time-now">Ahora</span></a
       >
     </p>
     <button @click="dismiss">

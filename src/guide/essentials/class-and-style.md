@@ -95,7 +95,13 @@ data() {
 <div :class="classObject"></div>
 ```
 
-Esto devolverá el mismo resultado. También podemos enlazar con una [propiedad computada](./computed) que devuelva un objeto. Este es un patrón común y poderoso:
+Esto renderizará:
+
+```vue-html
+<div class="active"></div>
+```
+
+También podemos enlazar a una [propiedad computada](./computed) que devuelve un objeto. Este es un patrón común y poderoso:
 
 <div class="composition-api">
 

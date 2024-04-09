@@ -21,7 +21,7 @@ import ListStagger from './transition-demos/ListStagger.vue'
 - Las clases de transición de CSS se aplicarán a los elementos individuales de la lista, **no** al grupo / contenedor en sí.
 
 :::tip
-Cuando se utiliza en [plantillas del DOM](/guide/essentials/component-basics#dom-template-parsing-caveats), se debe hacer referencia a este como `<transition-group>`.
+Cuando se utiliza en [plantillas en el DOM](/guide/essentials/component-basics#dom-template-parsing-caveats), se debe hacer referencia a este como `<transition-group>`.
 :::
 
 ## Transiciones de Entrada / Salida {#enter-leave-transitions}

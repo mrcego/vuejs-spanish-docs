@@ -174,7 +174,7 @@ Si estás creando tus plantillas directamente en un DOM (por ejemplo, como el co
 <button-counter></button-counter>
 ```
 
-Consulta [análisis de advertencias de la plantilla del DOM](#advertencias-sobre-el-procesamiento-de-las-plantillas-del-dom) para más detalles.
+Consulta [Análisis de advertencias de plantilla en el DOM](#in-dom-template-parsing-caveats) para más detalles.
 
 ## Pasando Props {#passing-props}
 
@@ -539,7 +539,7 @@ También puedes utilizar el atributo "is" para crear elementos HTML normales.
 
 Cuando se cambia entre varios componentes con `<component :is="...">`, un componente será desmontado cuando se cambie de lugar. Podemos forzar que los componentes inactivos permanezcan "vivos" con el componente integrado [`<KeepAlive>`](/guide/built-ins/keep-alive).
 
-## Advertencias sobre el Procesamiento de las Plantillas del DOM {#dom-template-parsing-caveats}
+## Advertencias sobre el procesamiento de las plantillas en el DOM {#in-dom-template-parsing-caveats}
 
 Si estás escribiendo tus plantillas de Vue directamente en el DOM, Vue tendrá que recuperar la cadena de la plantilla desde el DOM. Esto conduce a algunas advertencias debido al comportamiento de análisis nativo de HTML de los navegadores.
 
@@ -581,7 +581,7 @@ Ya hemos utilizado etiquetas de autocierre para los componentes en los ejemplos 
 
 Esto es debido a que el parser de plantillas de Vue respeta `/>` como una indicación para terminar cualquier etiqueta, independientemente de su tipo.
 
-Sin embargo, en las plantillas del DOM, debemos incluir siempre etiquetas de cierre explícitas:
+Sin embargo, en las plantillas en el DOM, debemos incluir siempre etiquetas de cierre explícitas:
 
 ```vue-html
 <my-component></my-component>
@@ -626,6 +626,6 @@ El componente personalizado `<blog-post-row>` será captado como contenido invá
 Cuando se utiliza en elementos HTML nativos, el valor de `is` debe llevar el prefijo `vue:` para ser interpretado como un componente Vue. Esto es necesario para evitar la confusión con los [elementos integrados personalizados](https://html.spec.whatwg.org/multipage/custom-elements#custom-elements-customized-builtin-example) nativos.
 :::
 
-¡Enhorabuena! Por ahora, eso es todo lo que necesitas saber sobre el análisis de advertencias de la plantilla del DOM y, en definitiva, el final de los _Esenciales_ de Vue. Todavía hay más que aprender, pero primero, recomendamos tomar un descanso para que juegues con Vue tú mismo, construyas algo divertido o revises algunos de los [Ejemplos](/examples/) si aún no lo has hecho.
+¡Enhorabuena! Por ahora, eso es todo lo que necesitas saber sobre el análisis de advertencias de la plantilla en el DOM y, en definitiva, el final de los _Esenciales_ de Vue. Todavía hay más que aprender, pero primero, recomendamos tomar un descanso para que juegues con Vue tú mismo, construyas algo divertido o revises algunos de los [ejemplos](/examples/) si aún no lo has hecho.
 
 Una vez que te sientas cómodo con los conocimientos que acabas de digerir, sigue con la guía para aprender más sobre los componentes en profundidad.

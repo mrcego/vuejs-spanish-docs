@@ -177,7 +177,7 @@ Normalmente, una plantilla en el DOM comienza como un marcado HTML escrito direc
 Para más detalles, consulta:
 
 - [Guía - Creando una Aplicación - Plantilla de Componente Raíz en el DOM](/guide/essentials/application.html#in-dom-root-component-template)
-- [Guía - Conceptos Básicos de Componentes - Precauciones al Analizar Plantillas en el DOM](/guide/essentials/component-basics.html#in-dom-template-parsing-caveats)
+- [Guía - Conceptos Básicos de Componentes - Advertencias sobre el procesamiento de las plantillas en el DOM](/guide/essentials/component-basics.html#in-dom-template-parsing-caveats)
 - [Opciones: Renderizado - template](/api/options-rendering.html#template)
 
 ## inject {#inject}

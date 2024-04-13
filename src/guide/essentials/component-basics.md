@@ -174,7 +174,7 @@ Si estás creando tus plantillas directamente en un DOM (por ejemplo, como el co
 <button-counter></button-counter>
 ```
 
-Consulta [Análisis de advertencias de plantilla en el DOM](#in-dom-template-parsing-caveats) para más detalles.
+Consulta [Advertencias sobre el procesamiento de las plantillas en el DOM](#in-dom-template-parsing-caveats) para más detalles.
 
 ## Pasando Props {#passing-props}
 

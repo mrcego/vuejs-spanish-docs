@@ -216,15 +216,19 @@ export function useFetch(url) {
   const data = ref(null)
   const error = ref(null)
 
-  watchEffect(() {
+  const fetchData = () => {
     // restablecer el estado antes de la recuperación..
     data.value = null
     error.value = null
-    // toValue() desenvuelve potenciales refs o getters
+
     fetch(toValue(url))
       .then((res) => res.json())
       .then((json) => (data.value = json))
       .catch((err) => (error.value = err))
+  })
+
+  watchEffect(() => {
+    fetchData()
   })
 
   return { data, error }

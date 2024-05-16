@@ -389,4 +389,5 @@ defineProps<{
 
 ## Restricciones {#restrictions}
 
-Debido a la diferencia en la semántica de ejecución del módulo, el código dentro de `<script setup>` depende del contexto de un SFC. Cuando se mueve a archivos externos `.js` o `.ts`, puede generar confusión tanto para los desarrolladores como para las herramientas. Por lo tanto, **`<script setup>`** no se puede utilizar con el atributo `src`.
+* Debido a la diferencia en la semántica de ejecución del módulo, el código dentro de `<script setup>` depende del contexto de un SFC. Cuando se mueve a archivos externos `.js` o `.ts`, puede generar confusión tanto para los desarrolladores como para las herramientas. Por lo tanto, **`<script setup>`** no se puede utilizar con el atributo `src`.
+* `<script setup>` no soporta Plantilla de Componente Raíz en el DOM.([Discusión relacionada](https://github.com/vuejs/core/issues/8391))

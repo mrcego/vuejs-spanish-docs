@@ -337,7 +337,7 @@ components/
 
 ## Componentes de cierre automático {#self-closing-components}
 
-**Los componentes sin contenido deben cerrarse automáticamente en [Componentes de un Solo Archivo](/guide/scaling-up/sfc), plantillas de cadena y [JSX](/guide/extras/render-function#jsx-tsx), pero nunca en plantillas del DOM.**
+**Los componentes sin contenido deben cerrarse automáticamente en [Componentes de un Solo Archivo](/guide/scaling-up/sfc), plantillas de cadena y [JSX](/guide/extras/render-function#jsx-tsx), pero nunca en plantillas en el DOM.**
 
 Los componentes de cierre automático comunican que no solo no tienen contenido, sino que están **destinados** a no tener contenido. Es la diferencia entre una página en blanco en un libro y una etiquetada como "Esta página se dejó en blanco intencionalmente". Tu código también es más limpio sin la etiqueta de cierre innecesaria.
 
@@ -375,7 +375,7 @@ Desafortunadamente, HTML no permite que los elementos personalizados se cierren 
 
 ## Formato de nombre de componentes en plantillas {#component-name-casing-in-templates}
 
-**En la mayoría de los proyectos, los nombres de los componentes siempre deben estar en PascalCase en [Componentes de un Solo Archivo](/guide/scaling-up/sfc) y plantillas de cadenas, pero en kebab-case en las plantillas del DOM.**
+**En la mayoría de los proyectos, los nombres de los componentes siempre deben estar en PascalCase en [Componentes de un Solo Archivo](/guide/scaling-up/sfc) y plantillas de cadenas, pero en kebab-case en las plantillas en el DOM.**
 
 PascalCase tiene algunas ventajas sobre kebab-case:
 
@@ -383,7 +383,7 @@ PascalCase tiene algunas ventajas sobre kebab-case:
 - `<MyComponent>` es visualmente más diferente de un elemento HTML de una sola palabra que `<my-component>`, porque hay dos caracteres diferentes (las dos mayúsculas), en lugar de solo uno (el guión).
 - Si usas elementos personalizados que no son de Vue en tus plantillas, como un componente web, PascalCase garantiza que tus componentes de Vue permanezcan claramente visibles.
 
-Desafortunadamente, debido a la insensibilidad de mayúsculas y minúsculas de HTML, las plantillas del DOM deben seguir usando kebab-case.
+Desafortunadamente, debido a la insensibilidad de mayúsculas y minúsculas de HTML, las plantillas en el DOM deben seguir usando kebab-case.
 
 También ten en cuenta que si ya has invertido mucho en kebab-case, la coherencia con las convenciones de HTML y poder usar el mismo enmarcado en todos tus proyectos puede ser más importante que las ventajas enumeradas anteriormente. En esos casos, **también es aceptable usar kebab-case en todas partes.**
 
@@ -401,7 +401,7 @@ También ten en cuenta que si ya has invertido mucho en kebab-case, la coherenci
 ```
 
 ```vue-html
-<!-- En plantillas del DOM -->
+<!-- En plantillas en el DOM -->
 <MyComponent></MyComponent>
 ```
 
@@ -416,7 +416,7 @@ También ten en cuenta que si ya has invertido mucho en kebab-case, la coherenci
 ```
 
 ```vue-html
-<!-- En plantillas del DOM -->
+<!-- En plantillas en el DOM -->
 <my-component></my-component>
 ```
 

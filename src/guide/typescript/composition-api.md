@@ -346,6 +346,8 @@ onMounted(() => {
 </template>
 ```
 
+Para obtener la interfaz DOM correcta puedes consultar páginas como [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#technical_summary).
+
 Ten en cuenta que para una estricta seguridad de tipo, es necesario utilizar encadenamiento opcional o guías de tipo cuando se accede a `el.value`. Esto se debe a que el valor inicial de la referencia es `null` hasta que se monta el componente, y también puede ser establecido a `null` si el elemento referenciado es desmontado por `v-if`.
 
 ## Escritura de Refs de la Plantilla del Componente {#typing-component-template-refs}

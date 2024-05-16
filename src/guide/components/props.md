@@ -148,7 +148,7 @@ export default {
 <span>{{ greetingMessage }}</span>
 ```
 
-Técnicamente, también puedes usar camelCase al pasar props a un componente hijo (excepto en [plantillas del DOM](/guide/essentials/component-basics#dom-template-parsing-caveats)). Sin embargo, la convención es usar kebab-case en todos los casos para alinearse con los atributos HTML:
+Técnicamente, también puedes usar camelCase al pasar props a un componente hijo (excepto en [plantillas en el DOM](/guide/essentials/component-basics#in-dom-template-parsing-caveats)). Sin embargo, la convención es usar kebab-case en todos los casos para alinearse con los atributos HTML:
 
 ```vue-html
 <MyComponent greeting-message="hola" />

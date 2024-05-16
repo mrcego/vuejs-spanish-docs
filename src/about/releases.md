@@ -58,7 +58,7 @@ Esto es solo una inquietud para los autores de librerías porque, en las aplicac
 
 Las versiones menores generalmente pasan por un número no fijo de versiones beta. Los lanzamientos mayores pasarán por una fase alfa y una fase beta.
 
-Adicionalmente, publicamos lanzamientos canary cada semana desde las ramas `main` y `minor` en Github. Estos son publicados como paquetes diferentes para evitar inflar los metadatos de npm del canal estable. Puedes instalarlo mediante `npx install-vue@canary` o `npx install-vue@canary-minor`, respectivamente.
+Adicionalmente, publicamos lanzamientos canary cada semana desde las ramas `main` y `minor` en Github. Estos son publicados como paquetes diferentes para evitar inflar los metadatos de npm del canal estable. Puedes instalarlos mediante `npx install-vue@canary` o `npx install-vue@canary-minor`, respectivamente.
 
 Los lanzamientos preliminares están destinados a pruebas de integración/estabilidad, y para que los primeros usuarios proporcionen comentarios sobre características inestables. No utilice versiones preliminares en producción. Todos los lanzamientos preliminares se consideran inestables y pueden llevar cambios importantes consigo; por lo tanto, indica siempre las versiones exactas cuando utilices lanzamientos preliminares.
 

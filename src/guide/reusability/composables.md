@@ -227,11 +227,6 @@ export function useFetch(url) {
       .catch((err) => (error.value = err))
   }
 
-  watchEffect(() {
-    // restablecer el estado antes de la recuperación..
-    fetchData(url)
-  })
-
   watchEffect(() => {
     fetchData()
   })

@@ -304,26 +304,17 @@ Uno de los problemas con los placeholders es que no cumplen los [criterios de co
 /* https://www.w3schools.com/howto/howto_css_placeholder.asp */
 
 #lastName::placeholder {
-   {
-    #instructions;
-  }
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
   opacity: 1; /* Firefox */
 }
 
 #lastName:-ms-input-placeholder {
-   {
-    #hiding-content;
-  }
   /* Internet Explorer 10-11 */
   color: black;
 }
 
 #lastName::-ms-input-placeholder {
-   {
-    #aria-hidden-true;
-  }
   /* Microsoft Edge */
   color: black;
 }
@@ -331,7 +322,7 @@ Uno de los problemas con los placeholders es que no cumplen los [criterios de co
 
 Lo mejor es proporcionar toda la información que el usuario necesita para completar los formularios fuera de cualquier entrada.
 
-### Instrucciones {#buttons}
+### Instrucciones {#instructions}
 
 Al agregar instrucciones para tus campos de entrada, asegúrate de vincularlos correctamente a la entrada. Puedes proporcionar instrucciones adicionales y vincular múltiples ids dentro de un [`aria-labelledby`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). Esto permite un diseño más flexible.
 
@@ -362,7 +353,7 @@ También puedes adjuntar las instrucciones a la entrada con [`aria-describedby`]
 
 <!-- <common-codepen-snippet title="Form Instructions" slug="WNREEqv" :height="265" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
 
-### Ocultar Contenidos {#functional-images}
+### Ocultar Contenidos {#hiding-content}
 
 Por lo general, no se recomienda ocultar visualmente las etiquetas, incluso si la entrada tiene un nombre accesible. Sin embargo, si la funcionalidad de la entrada se puede entender con el contenido adyacente, entonces podemos ocultar la etiqueta visual.
 
@@ -396,7 +387,7 @@ Podemos usar CSS para ocultar visualmente los elementos, pero mantenerlos dispon
 
 <!-- <common-codepen-snippet title="Form Search" slug="QWdMqWy" :height="265" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
 
-#### `aria-hidden="true"` {#standards}
+#### `aria-hidden="true"` {#aria-hidden-true}
 
 Agregar `aria-hidden="true"` ocultará el elemento de la tecnología de asistencia pero lo dejará visualmente disponible para otros usuarios. No lo utilices en elementos enfocables, sólo en contenidos decorativos, duplicados o fuera de pantalla.
 
@@ -405,7 +396,7 @@ Agregar `aria-hidden="true"` ocultará el elemento de la tecnología de asistenc
 <p aria-hidden="true">Esto está oculto para los lectores de pantalla.</p>
 ```
 
-### Botones {#web-content-accessibility-guidelines-wcag}
+### Botones {#buttons}
 
 Cuando se utilizan botones dentro de un formulario, se debe establecer el tipo para evitar el envío del formulario. También puedes utilizar una entrada para crear botones:
 
@@ -423,7 +414,7 @@ Cuando se utilizan botones dentro de un formulario, se debe establecer el tipo p
 
 <!-- <common-codepen-snippet title="Form Buttons" slug="JjEyrYZ" :height="467" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
 
-### Imágenes Funcionales {#wcag-2-1-four-main-guiding-principles-abbreviated-as-pour}
+### Imágenes Funcionales {#functional-images}
 
 - Campos de entrada
 
@@ -457,7 +448,7 @@ Cuando se utilizan botones dentro de un formulario, se debe establecer el tipo p
 
 <!-- <common-codepen-snippet title="Functional Images" slug="jOyLGqM" :height="265" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
 
-## Estándares {#web-accessibility-initiative-–-accessible-rich-internet-applications-wai-aria}
+## Estándares {#standards}
 
 La Iniciativa de Accesibilidad a la Web (WAI) del World Wide Web Consortium (W3C) desarrolla estándares de accesibilidad a la web para los diferentes componentes:
 
@@ -468,11 +459,11 @@ La Iniciativa de Accesibilidad a la Web (WAI) del World Wide Web Consortium (W3C
 - [Pautas de Accesibilidad al Contenido en la Web (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)
   - contenido web: utilizado por desarrolladores, herramientas de autoría y herramientas de evaluación de la accesibilidad
 
-### Pautas de Accesibilidad al Contenido en la Web (WCAG) {#resources}
+### Pautas de Accesibilidad al Contenido en la Web (WCAG) {#web-content-accessibility-guidelines-wcag}
 
 [WCAG 2.1](https://www.w3.org/TR/WCAG21/) se extiende sobre [WCAG 2.0](https://www.w3.org/TR/WCAG20/) y permite la implementación de nuevas tecnologías al abordar los cambios en la web. El W3C fomenta el uso de la versión más reciente de las WCAG al desarrollar o actualizar las políticas de accesibilidad web.
 
-#### WCAG 2.1 Cuatro Principios Rectores Principales (abreviados como POUR): {#documentation}
+#### WCAG 2.1 Cuatro Principios Rectores Principales (abreviados como POUR): {#wcag-2-1-four-main-guiding-principles-abbreviated-as-pour}
 
 - [Perceptible](https://www.w3.org/TR/WCAG21/#perceivable)
   - Los usuarios deben ser capaces de percibir la información que se presenta
@@ -483,23 +474,23 @@ La Iniciativa de Accesibilidad a la Web (WAI) del World Wide Web Consortium (W3C
 - [Robusto](https://www.w3.org/TR/WCAG21/#robust)
   - Los usuarios deben poder acceder al contenido a medida que avanzan las tecnologías.
 
-#### Iniciativa de Accesibilidad a la Web - Aplicaciones de Internet Enriquecidas Accesibles (WAI-ARIA) {#assistive-technologies}
+#### Iniciativa de Accesibilidad a la Web - Aplicaciones de Internet Enriquecidas Accesibles (WAI-ARIA) {#web-accessibility-initiative-–-accessible-rich-internet-applications-wai-aria}
 
 WAI-ARIA del W3C brinda orientación sobre cómo crear contenido dinámico y controles avanzados de interfaz de usuario.
 
 - [Aplicaciones ricas de Internet accesibles (WAI-ARIA) 1.2](https://www.w3.org/TR/wai-aria-1.2/)
 - [Prácticas de autoría WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-practices-1.2/)
 
-## Recursos {#testing}
+## Recursos {#resources}
 
-### Documentación {#users}
+### Documentación {#documentation}
 
 - [WCAG 2.0](https://www.w3.org/TR/WCAG20/)
 - [WCAG 2.1](https://www.w3.org/TR/WCAG21/)
 - [Aplicaciones ricas de Internet accesibles (WAI-ARIA) 1.2](https://www.w3.org/TR/wai-aria-1.2/)
 - [Prácticas de autoría WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-practices-1.2/)
 
-### Tecnologías de Apoyo
+### Tecnologías de Apoyo {#assistive-technologies}
 
 - Lectores de pantalla
   - [NVDA](https://www.nvaccess.org/download/)
@@ -511,7 +502,7 @@ WAI-ARIA del W3C brinda orientación sobre cómo crear contenido dinámico y con
   - [ZoomText](https://www.zoomtext.com/)
   - [Magnifier](https://support.microsoft.com/en-us/help/11542/windows-use-magnifier-to-make-things-easier-to-see)
 
-### Testing
+### Testing {#testing}
 
 - Herramientas automatizadas
   - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
@@ -527,7 +518,7 @@ WAI-ARIA del W3C brinda orientación sobre cómo crear contenido dinámico y con
   - [Visual Aria](https://chrome.google.com/webstore/detail/visual-aria/lhbmajchkkmakajkjenkchhnhbadmhmk?hl=en-US)
   - [Silktide Website Accessibility Simulator](https://chrome.google.com/webstore/detail/silktide-website-accessib/okcpiimdfkpkjcbihbmhppldhiebhhaf?hl=en-US)
 
-### Usuarios
+### Usuarios {#users}
 
 La Organización Mundial de la Salud estima que el 15% de la población mundial tiene algún tipo de discapacidad, entre el 2 y el 4% de ellas graves. Eso es un estimado de 1.000 millones de personas en todo el mundo, lo que convierte a las personas con discapacidad en el grupo minoritario más grande del mundo.
 

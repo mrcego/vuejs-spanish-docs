@@ -41,7 +41,9 @@ Las [definiciones detalladas de props](/guide/components/props#prop-validation) 
 
 - Documentan la API del componente, de modo que es fácil ver cómo se debe usar el componente.
 - En desarrollo, Vue te advertirá si proporcionas props con formato incorrecto a un componente, lo que te ayudará a detectar posibles fuentes de error.
-  :::
+:::
+
+<div class="options-api">
 
 <div class="style-example style-example-bad">
 <h3>Incorrecto</h3>
@@ -83,12 +85,55 @@ props: {
 
 </div>
 
+</div>
+
+<div class="composition-api">
+
+<div class="style-example style-example-bad">
+<h3>Incorrecto</h3>
+
+```js
+// Esto está bien solo cuando se crean prototipos
+const props = defineProps(['status'])
+```
+</div>
+
+<div class="style-example style-example-good">
+<h3>Correcto</h3>
+
+```js
+const props = defineProps({
+  status: String
+})
+```
+
+```js
+// ¡Aún mejor!
+const props = defineProps({
+  status: {
+    type: String,
+    required: true,
+    validator: (value) => {
+      return ['syncing', 'synced', 'version-conflict', 'error'].includes(
+        value
+      )
+    }
+  }
+})
+```
+
+</div>
+
+</div>
+
 ## Usar `v-for` con Clave {#use-keyed-v-for}
 
 El uso de `key` con `v-for` _siempre_ es necesaria en los componentes para mantener el estado interno del componente en el subárbol. Sin embargo, incluso para los elementos, es una buena práctica para mantener un comportamiento predecible, tal como la [constancia del objeto](https://bost.ocks.org/mike/constancy/) en las animaciones.
 
 ::: details Explicación detallada
 Digamos que tienes una lista de ToDos:
+
+<div class="options-api">
 
 ```js
 data() {
@@ -106,6 +151,26 @@ data() {
   }
 }
 ```
+
+
+</div>
+
+<div class="composition-api">
+
+```js
+const todos = ref([
+  {
+    id: 1,
+    text: 'Aprender a usar v-for'
+  },
+  {
+    id: 2,
+    text: 'Aprender a usar key'
+  }
+])
+```
+
+</div>
 
 Luego los ordenas alfabéticamente. Al actualizar el DOM, Vue optimizará el renderizado para realizar las menor cantidad de mutaciones posibles del DOM. Eso podría significar eliminar el primer elemento de los ToDos y luego agregarlo nuevamente al final de la lista.
 
@@ -172,6 +237,8 @@ arrojará un error, porque la directiva `v-if` será evaluada primero y la varia
 
 Esto podría arreglarse iterando sobre una propiedad calculada, así:
 
+<div class="options-api">
+
 ```js
 computed: {
   activeUsers() {
@@ -179,6 +246,18 @@ computed: {
   }
 }
 ```
+
+</div>
+
+<div class="composition-api">
+
+```js
+const activeUsers = computed(() => {
+  return users.filter((user) => user.isActive)
+})
+```
+
+</div>
 
 ```vue-html
 <ul>

@@ -41,8 +41,25 @@ const eventMap: Record<Placement, string> = {
   landing: '58FLAR2Z',
   page: 'ZXLO3IUT'
 }
+
 function track(interest?: boolean) {
   fathom.trackGoal(interest ? `Y2BVYNT2` : eventMap[props.placement], 0)
+}
+
+function resolveList(data: SponsorData) {
+  let currentTier = data[props.tier]
+  // in aside, treat platinum+priority as special
+  if (props.placement === 'aside') {
+    if (props.tier === 'platinum') {
+      currentTier = currentTier.filter((s) => !s.priority)
+    } else if (props.tier === 'special') {
+      currentTier = [
+        ...currentTier,
+        ...data.platinum.filter((s) => s.priority)
+      ]
+    }
+  }
+  return currentTier
 }
 </script>
 
@@ -54,7 +71,7 @@ function track(interest?: boolean) {
   >
     <template v-if="data && visible">
       <a
-        v-for="{ url, img, name } of data[tier]"
+        v-for="{ url, img, name } of resolveList(data)"
         class="sponsor-item"
         :href="url"
         target="_blank"

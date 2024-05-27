@@ -35,7 +35,7 @@ Toma un valor interno y devuelve un objeto ref reactivo y mutable, que tiene una
   const count = ref(0)
   console.log(count.value) // 0
 
-  count.value++
+  count.value = 1
   console.log(count.value) // 1
   ```
 

@@ -24,7 +24,7 @@ Cuando diseñes la estrategia de pruebas de tu aplicación Vue, debes aprovechar
 - **De componente**: Comprueba que tu componente se monta, se renderiza, se puede interactuar con él y se comporta como se espera. Estas pruebas importan más código que las pruebas unitarias, son más complejas y requieren más tiempo de ejecución.
 - **De extremo a extremo**: Comprueba las características que abarcan varias páginas y hace peticiones reales de red contra tu aplicación Vue hecha para producción. Estas pruebas a menudo implican la puesta en marcha de una base de datos u otro backend.
 
-Cada tipo de prueba desempeña un papel en la estrategia de pruebas de tu aplicación y cada una te protegerá contra diferentes tipos de problemas.
+Cada tipo de prueba desempeña un papel en la estrategia de pruebas de tu aplicación, y cada una te protegerá contra diferentes tipos de problemas.
 
 ## Generalidades {#overview}
 
@@ -140,7 +140,7 @@ const { getByText } = render(Stepper, {
 
 getByText('0') // Aserción implícita de que "0" está dentro del componente.
 
-const button = getByText('increment')
+const button = getByRole('button', { name: /increment/i })
 
 // Ejecuta un evento de clic al botón de incremento.
 await fireEvent.click(button)
@@ -244,7 +244,7 @@ Las pruebas de extremo a extremo no importan ningún código de tu aplicación d
 
 Las pruebas de extremo a extremo validan muchas de las capas de tu aplicación. Pueden apuntar a tu aplicación creada localmente o incluso a un entorno de prueba en vivo. Las pruebas contra el Entorno de prueba no sólo incluyen el código del frontend y el servidor estático, sino también todos los servicios y la infraestructura asociados del backend.
 
-> Cuanto más se parezcan sus pruebas a la forma en que se usa su software, más confianza le pueden brindar. - [Kent C. Dodds](https://twitter.com/kentcdodds/status/977018512689455106) - Autor de la Biblioteca de pruebas
+> Cuanto más se parezcan sus pruebas a la forma en como se usa su software, más confianza le pueden brindar. - [Kent C. Dodds](https://twitter.com/kentcdodds/status/977018512689455106) - Autor de la Biblioteca de pruebas
 
 Al probar cómo las acciones del usuario afectan su aplicación, las pruebas E2E suelen ser la clave para aumentar la confianza en el buen funcionamiento de una aplicación.
 
@@ -311,7 +311,7 @@ export default defineConfig({
 ```
 
 :::tip
-Si estás usando TypeScript, agrega `vitest/globals` al campo `types` en tu `tsconfig.json`.
+Si usas TypeScript, agrega `vitest/globals` al campo `types` en tu `tsconfig.json`.
 
 ```json
 // tsconfig.json
@@ -325,7 +325,7 @@ Si estás usando TypeScript, agrega `vitest/globals` al campo `types` en tu `tsc
 
 :::
 
-Luego, cree un archivo que termine en `*.test.js` en tu proyecto. Puedes colocar todos los archivos de prueba en un directorio de prueba en la raíz del proyecto, o en directorios de prueba junto a tus archivos fuente. Vitest los buscará automáticamente usando la convención de nomenclatura.
+Luego, crea un archivo que termine en `*.test.js` en tu proyecto. Puedes colocar todos los archivos de prueba en un directorio de prueba en la raíz del proyecto o en directorios de prueba junto a tus archivos fuente. Vitest los buscará automáticamente usando la convención de nomenclatura.
 
 ```js
 // MyComponent.test.js
@@ -417,7 +417,7 @@ export function withSetup(composable) {
   })
   app.mount(document.createElement('div'))
   // devolver el resultado y la instancia de la aplicación
-  // para probar provide / unmount
+  // para probar provide/unmount
   return [result, app]
 }
 ```

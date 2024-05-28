@@ -11,7 +11,7 @@ import { VTIconPlus } from '@vue/theme'
 const open = ref(true)
 
 /**
- * Invoca a esto si el banner es descartable
+ * Invoca esto si el banner es descartable
  */
 
 function dismiss() {

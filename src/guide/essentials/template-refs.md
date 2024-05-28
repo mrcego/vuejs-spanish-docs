@@ -67,7 +67,7 @@ export default {
 
 </div>
 
-Ten en cuenta que sólo puedes acceder a la ref **después de que el componente esté montado.** Si intentas acceder a <span class="options-api">`refs.input`</span><span class="composition-api">`input`</span> en la declaración de la plantilla, resultará `null` en la primera renderización. Esto se debe a que el elemento no existe hasta después del primer renderizado.
+Ten en cuenta que sólo puedes acceder a la ref **después de que el componente esté montado.** Si intentas acceder a <span class="options-api">`refs.input`</span><span class="composition-api">`input`</span> en la declaración de la plantilla, resultará <span class="options-api">`undefined`</span><span class="composition-api">`null`</span> en la primera renderización. Esto se debe a que el elemento no existe hasta después del primer renderizado.
 
 <div class="composition-api">
 

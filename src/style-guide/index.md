@@ -4,10 +4,6 @@ outline: deep
 
 # Guía de estilo {#style-guide}
 
-:::warning Notificación de Estado
-La guía de estilo está un poco desactualizada. La mayoría de los ejemplos se refieren solo en la Option API y no hay reglas con respecto al `<script setup>` ni la Composition API. Estamos planeando mejorarla en el futuro.
-:::
-
 Esta es la guía de estilo oficial específica para el código de Vue. Si usas Vue en un proyecto, esta es una excelente referencia para evitar errores, superficialidad y antipatrones. Sin embargo, creemos que ninguna guía de estilo es ideal para todos los equipos o proyectos, por lo que recomendamos desviaciones conscientes en función a la experiencia, la tecnología pertinente y los intereses individuales.
 
 En su mayor parte, evitamos las sugerencias sobre JavaScript o HTML en general. No nos importa si usa puntos y comas o comas finales. No nos importa si su HTML usa comillas simples o comillas dobles para los valores de los atributos. Sin embargo, existirán algunas excepciones donde hemos encontrado que un patrón particular es útil en el contexto de Vue.

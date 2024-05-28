@@ -115,7 +115,7 @@ Puedes vincularlos a un único elemento usando `v-bind` sin un argumento:
 
 Hasta ahora, solo hemos estado vinculando claves de propiedad simples en nuestras plantillas. Pero Vue en realidad admite todo el poder de las expresiones de JavaScript dentro de todos los enlaces de datos:
 
-```vue-html
+```html
 {{ number + 1 }}
 
 {{ ok ? 'SI' : 'NO' }}
@@ -138,7 +138,7 @@ Cada enlace solo puede contener **una única expresión**. Una expresión es un 
 
 Por lo tanto, lo siguiente **NO** funcionará:
 
-```vue-html
+```html
 <!-- esto es una declaración, no una expresión: -->
 {{ var a = 1 }}
 
@@ -150,7 +150,7 @@ Por lo tanto, lo siguiente **NO** funcionará:
 
 Es posible llamar a un método expuesto a componentes dentro de una expresión vinculante:
 
-```vue-html
+```html
 <time 
   :title="toTitleDate(date)" 
   :datetime="date"

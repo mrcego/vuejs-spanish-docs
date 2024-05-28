@@ -23,17 +23,17 @@ Proporciona un valor que puede ser inyectado por componentes descendientes.
   ```vue
   <script setup>
   import { ref, provide } from 'vue'
-  import { fooSymbol } from './injectionSymbols'
+  import { countSymbol } from './injectionSymbols'
 
   // proporcionar un valor estático
-  provide('foo', 'bar')
+  provide('path', '/project/')
 
   // proporcionar un valor reactivo
   const count = ref(0)
   provide('count', count)
 
   // proporcionar con claves Symbol
-  provide(fooSymbol, count)
+  provide(countSymbol, count)
   </script>
   ```
 
@@ -79,26 +79,36 @@ Inyecta un valor proporcionado por un componente de nivel superior o por la apli
   ```vue
   <script setup>
   import { inject } from 'vue'
-  import { fooSymbol } from './injectionSymbols'
+  import { countSymbol } from './injectionSymbols'
 
   // inyectar valor estático sin valor predeterminado
-  const foo = inject('foo')
+  const path = inject('path')
 
   // inyectar valor reactivo
   const count = inject('count')
 
   // inyectar con claves Symbol
-  const foo2 = inject(fooSymbol)
+  const count2 = inject(countSymbol)
 
   // inyectar con valor predeterminado
-  const bar = inject('foo', 'default value')
+  const bar = inject('path', '/default-path')
 
-  // inyectar fábrica como valor predeterminado
-  const baz = inject('foo', () => new Map())
+  // inyectar función como valor predeterminado
+  const fn = inject('function', () => {})
 
-  // inyectar con el valor predeterminado de la función, pasando el 3er argumento
-  const fn = inject('function', () => {}, false)
+  // inyectar con valor fábrica por defecto
+  const baz = inject('factory', () => newExpensiveObject(), true)
   </script>
+  ```
+
+## hasInjectionContext() <sup class="vt-badge" data-text="3.3+" /> {#has-injection-context}
+
+Devuelve true si [inject()](#inject) puede usarse sin advertencia por ser llamado en el lugar equivocado (por ejemplo, fuera de `setup()`). Este método está diseñado para ser usado por bibliotecas que quieran usar `inject()` internamente sin lanzar una advertencia al usuario final.
+
+- **Tipo**
+
+  ```ts
+  function hasInjectionContext(): boolean
   ```
 
 - **Véase también**:

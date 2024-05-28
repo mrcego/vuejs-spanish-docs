@@ -1,9 +1,9 @@
 <script setup>
 /**
- * Adding a new banner:
- * 1. uncomment the banner slot in ../index.ts
- * 2. uncomment and update BANNER_ID in ../../inlined-scripts/restorePreferences.ts
- * 3. update --vt-banner-height if necessary
+ * Añadir un nuevo banner:
+ * 1. Descomenta el slot de banner en ../index.ts
+ * 2. Descomenta y actualiza BANNER_ID en ../../inlined-scripts/restorePreferences.ts
+ * 3. Actualiza --vt-banner-height si es necesario
  */
 import { ref } from 'vue'
 import { VTIconPlus } from '@vue/theme'
@@ -11,8 +11,9 @@ import { VTIconPlus } from '@vue/theme'
 const open = ref(true)
 
 /**
- * Call this if the banner is dismissible
+ * Invoca a esto si el banner es descartable
  */
+
 function dismiss() {
   open.value = false
   document.documentElement.classList.add('banner-dismissed')
@@ -99,14 +100,14 @@ function dismiss() {
       </svg>
       <div class="banner__middle">
         <div class="title gradient_text">
-          Haven't migrated to Vue 3 yet?
+          ¿Aún no has migrado a Vue 3?
         </div>
         <div class="separator"></div>
         <div class="subtitle white_text">
-          Explore Never-Ending Support for Vue 2 by HeroDevs
+          Explora el soporte interminable para Vue 2 por HeroDevs
         </div>
         <div class="cta_button_container">
-          <button class="cta_button">Learn more</button>
+          <button class="cta_button">Más información</button>
         </div>
       </div>
       <svg

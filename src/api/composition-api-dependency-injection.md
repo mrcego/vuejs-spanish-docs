@@ -103,7 +103,7 @@ Inyecta un valor proporcionado por un componente de nivel superior o por la apli
 
 ## hasInjectionContext() <sup class="vt-badge" data-text="3.3+" /> {#has-injection-context}
 
-Devuelve true si [inject()](#inject) puede usarse sin advertencia por ser llamado en el lugar equivocado (por ejemplo, fuera de `setup()`). Este método está diseñado para ser usado por bibliotecas que quieran usar `inject()` internamente sin lanzar una advertencia al usuario final.
+Devuelve true si [inject()](#inject) puede usarse sin advertencia por ser llamado en el lugar equivocado (por ejemplo, fuera de `setup()`). Este método está diseñado para ser usado por librerías que quieran usar `inject()` internamente sin lanzar una advertencia al usuario final.
 
 - **Tipo**
 

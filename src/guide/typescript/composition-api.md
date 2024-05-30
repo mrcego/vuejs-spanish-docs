@@ -139,6 +139,18 @@ En `<script setup>`, la función `emit` también puede ser tipada usando la decl
 // tiempo de ejecución
 const emit = defineEmits(['change', 'update'])
 
+// basado en opciones
+const emit = defineEmits({
+  change: (id: number) => {
+    // devuelve `true` o `false` para indicar
+    // validación correcta / incorrecta
+  },
+  update: (value: string) => {
+    // devuelve `true` o `false` para indicar
+    // validación correcta / incorrecta
+  }
+})
+
 // basado en el tipo
 const emit = defineEmits<{
   (e: 'change', id: number): void

@@ -91,7 +91,7 @@ El ejemplo anterior demuestra las dos características principales de Vue:
 Es posible que ya tengas preguntas; no te preocupes. Cubriremos cada pequeño detalle en el resto de la documentación. Por ahora, sigue leyendo para que puedas tener una comprensión de alto nivel de lo que ofrece Vue.
 
 :::tip Prerrequisitos
-El resto de la documentación supone una familiaridad básica con HTML, CSS y JavaScript. Si eres totalmente nuevo en el desarrollo frontend, puede que no sea la mejor idea saltar directamente a un framework como tu primer paso. ¡Aprende los conceptos básicos y luego regresa! Puedes comprobar tu nivel de conocimientos con [este resumen de JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/Language_Overview). La experiencia previa con otros frameworks ayuda, pero no es necesaria.
+El resto de la documentación supone una familiaridad básica con HTML, CSS y JavaScript. Si eres totalmente nuevo en el desarrollo frontend, puede que no sea la mejor idea saltar directamente a un framework como tu primer paso. ¡Aprende los conceptos básicos y luego regresa! Puedes comprobar tu nivel de conocimientos con estas descripciones generales de [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript), [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML) y [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps) si es necesario. La experiencia previa con otros frameworks ayuda, pero no es necesaria.
 :::
 
 ## El Framework Progresivo {#the-progressive-framework}

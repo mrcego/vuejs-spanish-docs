@@ -127,8 +127,10 @@ Este es el orden por defecto que recomendamos para las opciones de los component
 
 Cuando los componentes empiezan a parecer apretujados o difíciles de leer, añadir espacios entre las propiedades de varias líneas puede hacer que sean más fáciles de recorrer de nuevo. En algunos editores, como Vim, este tipo de opciones de formato también pueden facilitar la navegación con el teclado.
 
-<div class="style-example style-example-good">
-<h3>Correcto</h3>
+<div class="options-api">
+
+<div class="style-example style-example-bad">
+<h3>Incorrecto</h3>
 
 ```js
 props: {
@@ -156,6 +158,11 @@ computed: {
   }
 }
 ```
+
+</div>
+
+<div class="style-example style-example-good">
+<h3>Correcto</h3>
 
 ```js
 // No spaces are also fine, as long as the component
@@ -181,6 +188,68 @@ computed: {
   }
 }
 ```
+
+</div>
+
+</div>
+
+<div class="composition-api">
+
+<div class="style-example style-example-bad">
+<h3>Incorrecto</h3>
+
+```js
+defineProps({
+  value: {
+    type: String,
+    required: true
+  },
+  focused: {
+    type: Boolean,
+    default: false
+  },
+  label: String,
+  icon: String
+})
+const formattedValue = computed(() => {
+  // ...
+})
+const inputClasses = computed(() => {
+  // ...
+})
+```
+
+</div>
+
+<div class="style-example style-example-good">
+<h3>Correcto</h3>
+
+```js
+defineProps({
+  value: {
+    type: String,
+    required: true
+  },
+
+  focused: {
+    type: Boolean,
+    default: false
+  },
+
+  label: String,
+  icon: String
+})
+
+const formattedValue = computed(() => {
+  // ...
+})
+
+const inputClasses = computed(() => {
+  // ...
+})
+```
+
+</div>
 
 </div>
 

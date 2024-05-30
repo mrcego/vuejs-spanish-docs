@@ -163,7 +163,7 @@ Observa cómo puedes incluir `autocomplete='on'` en el elemento del formulario y
 Proporciona etiquetas para describir el propósito de todos los controles del formulario; conecta `for` y `id`:
 
 ```vue-html
-<label for="name">Nombre</label>
+<label for="name">Nombre: </label>
 <input type="text" name="name" id="name" v-model="name" />
 ```
 
@@ -191,7 +191,7 @@ Establecer explícitamente las etiquetas con un identificador coincidente es má
 También puedes dar a la entrada un nombre accesible con [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
 ```vue-html
-<label for="name">Nombre</label>
+<label for="name">Nombre: </label>
 <input
   type="text"
   name="name"
@@ -220,7 +220,7 @@ Usar [`aria-labelledby`](https://developer.mozilla.org/en-US/docs/Web/Accessibil
 >
   <h1 id="billing">Facturación</h1>
   <div class="form-item">
-    <label for="name">Nombre:</label>
+    <label for="name">Nombre: </label>
     <input
       type="text"
       name="name"
@@ -250,7 +250,7 @@ Usar [`aria-labelledby`](https://developer.mozilla.org/en-US/docs/Web/Accessibil
 >
   <h1 id="billing">Facturación</h1>
   <div class="form-item">
-    <label for="name">Nombre completo:</label>
+    <label for="name">Nombre completo: </label>
     <input
       type="text"
       name="name"
@@ -329,7 +329,7 @@ Al agregar instrucciones para tus campos de entrada, asegúrate de vincularlos c
 ```vue-html
 <fieldset>
   <legend>Usando aria-labelledby</legend>
-  <label id="date-label" for="date">Fecha actual:</label>
+  <label id="date-label" for="date">Fecha actual: </label>
   <input
     type="date"
     name="date"
@@ -345,7 +345,7 @@ También puedes adjuntar las instrucciones a la entrada con [`aria-describedby`]
 ```vue-html
 <fieldset>
   <legend>Usando aria-describedby</legend>
-  <label id="dob" for="dob">Fecha de nacimiento:</label>
+  <label id="dob" for="dob">Fecha de nacimiento: </label>
   <input type="date" name="dob" id="dob" aria-describedby="dob-instructions" />
   <p id="dob-instructions">MM/DD/YYYY</p>
 </fieldset>

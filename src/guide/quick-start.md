@@ -17,7 +17,7 @@ footer: false
 :::tip Prerequisitos
 
 - Familiaridad con la línea de comandos
-- Instalar [Node.js](https://nodejs.org/) versión 16.0 o superior
+- Instalar [Node.js](https://nodejs.org/) versión 18.0 o superior
   :::
 
 En esta sección presentaremos cómo crear una [Aplicación de una Sola Página (SPA)](/guide/extras/ways-of-using-vue#single-page-application-spa) de Vue en tu máquina local. El proyecto creado utilizará una configuración de compilación basada en [Vite](https://vitejs.dev) y nos permitirá utilizar los [Componentes de un Solo Archivo (SFCs)](/guide/scaling-up/sfc) de Vue.

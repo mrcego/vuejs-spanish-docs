@@ -173,7 +173,7 @@ Las pruebas de componentes deben centrarse en las interfaces públicas del compo
     }
   })
 
-  getByText('0') // Afirmación implícita de que "0" está dentro del componente
+  getByText('0') // Aserción implícita de que "0" está dentro del componente
 
   const button = getByRole('button', { name: /increment/i })
 

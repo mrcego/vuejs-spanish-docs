@@ -123,7 +123,7 @@ Los [puntos de referencia](https://developer.mozilla.org/en-US/docs/Web/Accessib
 | main            | role="main"          | El contenido principal o central del documento.                                                                                      |
 | footer          | role="contentinfo"   | Información sobre el documento principal: notas a pie de página/derechos de autor/enlaces a la declaración de privacidad             |
 | aside           | role="complementary" | Apoya el contenido principal, pero está separado y es significativo en su propio contenido                                           |
-| _Not available_ | role="search"        | Esta sección contiene la funcionalidad de búsqueda de la aplicación                                                                  |
+| search          | role="search"        | Esta sección contiene la funcionalidad de búsqueda de la aplicación                                                                  |
 | form            | role="form"          | Colección de elementos asociados al formulario                                                                                       |
 | section         | role="region"        | Contenido que es relevante y al que los usuarios probablemente querrán navegar. Se debe proporcionar una etiqueta para este elemento |
 
@@ -163,7 +163,7 @@ Observa cómo puedes incluir `autocomplete='on'` en el elemento del formulario y
 Proporciona etiquetas para describir el propósito de todos los controles del formulario; conecta `for` y `id`:
 
 ```vue-html
-<label for="name">Nombre</label>
+<label for="name">Nombre: </label>
 <input type="text" name="name" id="name" v-model="name" />
 ```
 
@@ -191,7 +191,7 @@ Establecer explícitamente las etiquetas con un identificador coincidente es má
 También puedes dar a la entrada un nombre accesible con [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
 ```vue-html
-<label for="name">Nombre</label>
+<label for="name">Nombre: </label>
 <input
   type="text"
   name="name"
@@ -220,7 +220,7 @@ Usar [`aria-labelledby`](https://developer.mozilla.org/en-US/docs/Web/Accessibil
 >
   <h1 id="billing">Facturación</h1>
   <div class="form-item">
-    <label for="name">Nombre:</label>
+    <label for="name">Nombre: </label>
     <input
       type="text"
       name="name"
@@ -250,7 +250,7 @@ Usar [`aria-labelledby`](https://developer.mozilla.org/en-US/docs/Web/Accessibil
 >
   <h1 id="billing">Facturación</h1>
   <div class="form-item">
-    <label for="name">Nombre completo:</label>
+    <label for="name">Nombre completo: </label>
     <input
       type="text"
       name="name"
@@ -329,7 +329,7 @@ Al agregar instrucciones para tus campos de entrada, asegúrate de vincularlos c
 ```vue-html
 <fieldset>
   <legend>Usando aria-labelledby</legend>
-  <label id="date-label" for="date">Fecha actual:</label>
+  <label id="date-label" for="date">Fecha actual: </label>
   <input
     type="date"
     name="date"
@@ -345,7 +345,7 @@ También puedes adjuntar las instrucciones a la entrada con [`aria-describedby`]
 ```vue-html
 <fieldset>
   <legend>Usando aria-describedby</legend>
-  <label id="dob" for="dob">Fecha de nacimiento:</label>
+  <label id="dob" for="dob">Fecha de nacimiento: </label>
   <input type="date" name="dob" id="dob" aria-describedby="dob-instructions" />
   <p id="dob-instructions">MM/DD/YYYY</p>
 </fieldset>

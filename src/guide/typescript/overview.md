@@ -42,7 +42,7 @@ Los proyectos creados a través de `create-vue` incluyen `tsconfig.json` preconf
 
 Al configurar `tsconfig.json` manualmente, algunas opciones significativas son:
 
-- [`compilerOptions.isolatedModules`](https://www.typescriptlang.org/tsconfig#isolatedModules) se establece en `true` porque Vite utiliza [esbuild](https://esbuild.github.io/) para transpilar TypeScript y está sujeto a las limitaciones de transpilación de un solo archivo.
+- [`compilerOptions.isolatedModules`](https://www.typescriptlang.org/tsconfig#isolatedModules) se establece en `true` porque Vite utiliza [esbuild](https://esbuild.github.io/) para transpilar TypeScript y está sujeto a las limitaciones de transpilación de un solo archivo. [`compilerOptions.verbatimModuleSyntax`](https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax) es [un superconjunto de `isolatedModules`](https://github.com/microsoft/TypeScript/issues/53601) y también es una buena opción, es lo que [`@vue/tsconfig`](https://github.com/vuejs/tsconfig) usa.
 
 - Si estás usando la Options API, necesitas establecer [`compilerOptions.strict`](https://www.typescriptlang.org/tsconfig#strict) a `true` (o al menos activar [`compilerOptions.noImplicitThis`](https://www.typescriptlang.org/tsconfig#noImplicitThis), que es una parte de la bandera `strict`) para aprovechar la comprobación de tipo de `this` en las opciones de los componentes. En caso contrario, `this` será tratado como `any`.
 

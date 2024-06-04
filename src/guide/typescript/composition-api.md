@@ -50,6 +50,16 @@ const props = defineProps<Props>()
 </script>
 ```
 
+Esto también funciona si `Props` se importa desde una fuente externa. Esta función requiere que TypeScript sea una dependencia de Vue.
+
+```vue
+<script setup lang="ts">
+import type { Props } from './foo'
+
+const props = defineProps<Props>()
+</script>
+```
+
 #### Limitaciones de la Sintaxis {#syntax-limitations}
 
 En la versión 3.2 e inferiores, el parámetro de tipo genérico para `defineProps()` se limitaba a un literal de tipo o a una referencia a una interfaz local.
@@ -138,6 +148,18 @@ En `<script setup>`, la función `emit` también puede ser tipada usando la decl
 <script setup lang="ts">
 // tiempo de ejecución
 const emit = defineEmits(['change', 'update'])
+
+// basado en opciones
+const emit = defineEmits({
+  change: (id: number) => {
+    // devuelve `true` o `false` para indicar
+    // validación correcta / incorrecta
+  },
+  update: (value: string) => {
+    // devuelve `true` o `false` para indicar
+    // validación correcta / incorrecta
+  }
+})
 
 // basado en el tipo
 const emit = defineEmits<{

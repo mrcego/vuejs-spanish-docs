@@ -156,34 +156,6 @@ components/
 
 </div>
 
-## Nombres de componentes de instancia única {#single-instance-component-names}
-
-**Los componentes que solo deben tener una única instancia activa deben comenzar con el prefijo `The`, para indicar que solo puede haber uno.**
-
-Esto no significa que el componente solo se use en una sola página, sino que solo se usará una vez _por página_. Estos componentes no aceptan props, ya que son específicos para tu aplicación, no del contexto de la misma. Si encuentras la necesidad de agregar props, es buen indicio de que este es en realidad un componente reutilizable que solo se usa una vez por página _por ahora_.
-
-<div class="style-example style-example-bad">
-<h3>Incorrecto</h3>
-
-```
-components/
-|- Heading.vue
-|- MySidebar.vue
-```
-
-</div>
-
-<div class="style-example style-example-good">
-<h3>Correcto</h3>
-
-```
-components/
-|- TheHeading.vue
-|- TheSidebar.vue
-```
-
-</div>
-
 ## Nombres de componentes fuertemente acoplados {#tightly-coupled-component-names}
 
 **Los componentes hijos que están fuertemente acoplados con su padre deben incluir el nombre del componente padre como prefijo.**

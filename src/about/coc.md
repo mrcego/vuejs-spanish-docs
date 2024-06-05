@@ -42,4 +42,6 @@ Los encargados del mantenimiento del proyecto que no sigan o hagan cumplir el C�
 
 Este Código de Conducta es una adaptación del [Contributor Covenant][homepage], versión 1.4, disponible en https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
+Para obtener respuestas a preguntas comunes sobre este código de conducta, consulta https://www.contributor-covenant.org/faq
+
 [homepage]: https://www.contributor-covenant.org

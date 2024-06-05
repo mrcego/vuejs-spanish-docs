@@ -123,7 +123,7 @@ Los [puntos de referencia](https://developer.mozilla.org/en-US/docs/Web/Accessib
 | main            | role="main"          | El contenido principal o central del documento.                                                                                      |
 | footer          | role="contentinfo"   | Información sobre el documento principal: notas a pie de página/derechos de autor/enlaces a la declaración de privacidad             |
 | aside           | role="complementary" | Apoya el contenido principal, pero está separado y es significativo en su propio contenido                                           |
-| _Not available_ | role="search"        | Esta sección contiene la funcionalidad de búsqueda de la aplicación                                                                  |
+| search          | role="search"        | Esta sección contiene la funcionalidad de búsqueda de la aplicación                                                                  |
 | form            | role="form"          | Colección de elementos asociados al formulario                                                                                       |
 | section         | role="region"        | Contenido que es relevante y al que los usuarios probablemente querrán navegar. Se debe proporcionar una etiqueta para este elemento |
 
@@ -499,7 +499,7 @@ WAI-ARIA del W3C brinda orientación sobre cómo crear contenido dinámico y con
   - [ChromeVox](https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en)
 - Herramientas de zoom
   - [MAGic](https://www.freedomscientific.com/products/software/magic/)
-  - [ZoomText](https://www.zoomtext.com/)
+  - [ZoomText](https://www.freedomscientific.com/products/software/zoomtext/)
   - [Magnifier](https://support.microsoft.com/en-us/help/11542/windows-use-magnifier-to-make-things-easier-to-see)
 
 ### Testing {#testing}

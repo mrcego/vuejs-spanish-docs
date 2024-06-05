@@ -177,14 +177,14 @@ export default {
 
 </div>
 
-La opción `emits` y el macro `defineEmits()` también admiten una sintaxis de objeto, que nos permite realizar una validación en tiempo de ejecución del payload de los eventos emitidos:
+La opción `emits` y el macro `defineEmits()` también admiten una sintaxis de objeto. Si utilizas TypeScript puedes tipar argumentos, lo que nos permite realizar una validación en tiempo de ejecución del payload de los eventos emitidos:
 
 <div class="composition-api">
 
 ```vue
 <script setup lang="ts">
 const emit = defineEmits({
-  submit(payload) {
+  submit(payload: { email: string; password: string }) {
     // devuelve `true` o `false` para indicar
     // que la validación ha pasado / no ha pasado
   }
@@ -211,7 +211,7 @@ Más detalles: [Escritura de Emits del Componente](/guide/typescript/composition
 ```js
 export default {
   emits: {
-    submit(payload) {
+    submit(payload: { email: string; password: string }) {
       // devuelve `true` o `false` para indicar
       // que la validación ha pasado / no ha pasado
     }
@@ -288,3 +288,15 @@ export default {
 ```
 
 </div>
+
+## Eventos como Props {#events-props}
+
+También puedes declarar y pasar `eventos` como `props`, prefijando el nombre del evento en mayúsculas con `on`.
+
+Usar `props.onEvent` tiene un comportamiento diferente que usar `emit('event')`, ya que el primero sólo manejará el listener basado en la propiedad (ya sea `@event` o `:on-event`)
+
+:::warning
+Si se pasan tanto `:onEvent` como `@event` `props.onEvent` podría ser un array de `funciones` en lugar de una sola `función`, este comportamiento no es estable y podría cambiar en el futuro.
+:::
+
+Debido a esto, se recomienda usar `emit('event')` en lugar de `props.onEvent` cuando se emitan eventos.

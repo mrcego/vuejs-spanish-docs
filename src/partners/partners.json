@@ -53,6 +53,7 @@
   {
     "name": "Monterail",
     "logo": "monterail.png",
+    "hero": "monterail-hero.png",
     "flipLogo": true,
     "intro": "Monterail es una empresa de desarrollo de software de servicio completo de Polonia. Desde 2010, hemos estado construyendo software innovador para start-ups, PYMES y empresas de diversas industrias a nivel mundial. Nuestros expertos en Vue, utilizando tecnologías y frameworks de probada eficacia, han realizado más de 30 proyectos basados en Vue.",
     "description": [
@@ -175,36 +176,6 @@
     },
     "contact": "we@webreinvent.com",
     "hiring": "https://webreinvent.com/career?utm_source=vuejs.org&utm_medium=website&utm_campaign=partner-hiring-link"
-  },
-  {
-    "name": "Dreamonkey",
-    "logo": "dreamonkey.png",
-    "hero": "dreamonkey-hero.png",
-    "intro": "Somos una casa de software italiana, que incluye colaboradores de equipos internacionales, con 8 años de experiencia en diseño y desarrollo de software. Construimos software desde cero o lo rediseñamos y apoyamos a los equipos de otras empresas, especialmente para la industria del IoT, entrega, finanzas, medicina, automoción y cadena de suministro, trabajando principalmente para clientes estadounidenses y canadienses. Somos orgullosos patrocinadores del framework Quasar y miembros de su equipo central.",
-    "description": [
-      "Nuestro stack incluye Vue, Quasar, Laravel y, cuando se solicita, también Angular. Nos esforzamos por producir código de alta calidad, limpio y bien documentado, haciéndolo sólido como una roca mediante pruebas automáticas. Nuestro frontend sigue las principales directrices de Google Material Design",
-      "Somos capaces de liderar proyectos desde el inicio hasta su despliegue, incluyendo análisis de requisitos, diseño UX/UI, entrega de activos de diseño, desarrollo y configuración de pipelines CI/CD en AWS. Podemos fusionarnos con la metodología ágil del cliente y, cuando se nos solicite, podemos encargarnos también de la gestión del proyecto con un profesional dedicado",
-      "Tenemos experiencia con proyectos de diferente complejidad, desde startups a nivel empresarial. Podemos proporcionar UIs estáticas, MPVs funcionales, SPA totalmente operativas o aplicaciones móviles. También dividimos nuestro equipo para proporcionar al cliente la experiencia específica que necesita, ya sea desarrollo, diseño o simplemente un análisis de viabilidad",
-      "Si necesita integrar nuevas habilidades en su equipo, podemos estructurar un programa de formación centrado en temas de desarrollo o diseño de su interés y ayudar a sus empleados a progresar con lecciones dedicadas."
-    ],
-    "proficiencies": [
-      "Vue",
-      "Quasar",
-      "Angular",
-      "Capacitor",
-      "Laravel",
-      "Node.js",
-      "NestJS",
-      "UX Design",
-      "AWS"
-    ],
-    "region": ["Europa", "Norte América"],
-    "website": {
-      "text": "dreamonkey.com",
-      "url": "https://dreamonkey.com/en/vue-partner"
-    },
-    "contact": "info@dreamonkey.com",
-    "hiring": "https://dreamonkey.com/en/work-with-us"
   },
   {
     "name": "HeroDevs",

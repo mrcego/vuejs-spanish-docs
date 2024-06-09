@@ -160,7 +160,11 @@ En este caso, el componente hijo debería esperar una props `title` y emitir un 
 ```vue
 <!-- MyComponent.vue -->
 <script setup>
-defineProps(['title'])
+defineProps({
+  title: {
+    required: true
+  }
+})
 defineEmits(['update:title'])
 </script>
 

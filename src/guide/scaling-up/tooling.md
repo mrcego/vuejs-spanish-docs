@@ -1,3 +1,7 @@
+<script setup>
+import { VTCodeGroup, VTCodeGroupTab } from '@vue/theme'
+</script>
+
 # Herramientas {#tooling}
 
 ## Pruébalo en Línea {#try-it-online}
@@ -21,7 +25,36 @@ También se recomienda utilizar estas zonas de práctica en línea para proveer 
 
 Para empezar con Vite + Vue, simplemente ejecuta:
 
-<div class="language-sh"><pre><code><span class="line"><span style="color:var(--vt-c-green);">$</span> <span style="color:#A6ACCD;">npm create vue@latest</span></span></code></pre></div>
+<VTCodeGroup>
+  <VTCodeGroupTab label="npm">
+
+```sh
+$ npm create vue@latest
+```
+
+  </VTCodeGroupTab>
+  <VTCodeGroupTab label="pnpm">
+
+```sh
+$ pnpm create vue@latest
+```
+
+  </VTCodeGroupTab>
+  <VTCodeGroupTab label="yarn">
+
+```sh
+$ yarn create vue@latest
+```
+
+  </VTCodeGroupTab>
+  <VTCodeGroupTab label="bun">
+
+```sh
+$ bun create vue@latest
+```
+
+  </VTCodeGroupTab>
+</VTCodeGroup>
 
 Este comando instalará y ejecutará [create-vue](https://github.com/vuejs/create-vue), la herramienta oficial de andamiaje de proyectos de Vue.
 

@@ -443,10 +443,8 @@ export const sidebar: ThemeConfig['sidebar'] = {
           text: 'Utilidad del Tipado de TypeScript',
           link: '/api/utility-types'
         },
-        {
-          text: 'Renderizador Personalizado',
-          link: '/api/custom-renderer'
-        }
+        { text: 'Renderizador Personalizado', link: '/api/custom-renderer' },
+        { text: 'Banderas de tiempo de compilación', link: '/api/compile-time-flags' }
       ]
     }
   ],

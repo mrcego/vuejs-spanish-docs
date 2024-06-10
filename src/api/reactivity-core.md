@@ -361,6 +361,7 @@ Observa una o más fuentes de datos reactivas e invoca una función de devoluci�
     flush?: 'pre' | 'post' | 'sync' // por defecto: 'pre'
     onTrack?: (event: DebuggerEvent) => void
     onTrigger?: (event: DebuggerEvent) => void
+    once?: boolean // por defecto: false (3.4+)
   }
   ```
 
@@ -387,6 +388,7 @@ Observa una o más fuentes de datos reactivas e invoca una función de devoluci�
   - **`deep`**: fuerza el recorrido profundo de la fuente si es un objeto, de modo que la devolución de llamada se dispare en mutaciones profundas. Vea [Watchers Profundos](/guide/essentials/watchers#deep-watchers).
   - **`flush`**: ajusta el tiempo de descarga de la devolución de llamada. Vea [Temporización del Flujo del Callback](/guide/essentials/watchers#callback-flush-timing) y [`watchEffect()`](/api/reactivity-core#watcheffect).
   - **`onTrack / onTrigger`**: depura las dependencias del watcher. Vea [Depuración del Watcher](/guide/extras/reactivity-in-depth#watcher-debugging).
+  - **`once`**: ejecuta la devolución de llamada solo una vez. El observador se detiene automáticamente después de la primera ejecución de la devolución de llamada. <sup class="vt-badge" data-text="3.4+" />
 
   Comparado con [`watchEffect()`](#watcheffect), `watch()` nos permite:
 

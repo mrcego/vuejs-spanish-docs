@@ -17,6 +17,7 @@ const nav: ThemeConfig['nav'] = [
       { text: 'Inicio Rápido', link: '/guide/quick-start' },
       // { text: 'Guía de Estilo', link: '/style-guide/' },
       { text: 'Glosario', link: '/glossary/' },
+      { text: 'Referencias de error', link: '/error-reference/' },
       {
         text: 'Documentación de Vue 2',
         link: 'https://v2.vuejs.org'
@@ -45,7 +46,10 @@ const nav: ThemeConfig['nav'] = [
         items: [
           { text: 'Socios', link: '/partners/' },
           { text: 'Temas', link: '/ecosystem/themes' },
-          { text: 'Componentes de IU', link: 'https://ui-libs.vercel.app' },
+          {
+            text: 'Componentes de IU',
+            link: 'https://ui-libs.vercel.app'
+          },
           {
             text: 'Certificación',
             link: 'https://certification.vuejs.org/?ref=vuejs-nav'

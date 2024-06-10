@@ -126,9 +126,7 @@ A partir de la versión 3.4, una propiedad computada solo activará efectos cuan
 
 ```js
 const count = ref(0)
-const isEven = computed(() => {
-  return count.value % 2 === 0 ? true : false
-})
+const isEven = computed(() => count.value % 2 === 0)
 
 watchEffect(() => console.log(isEven.value)) // true
 
@@ -142,7 +140,7 @@ Esto reduce las activaciones innecesarias de efectos, pero desafortunadamente no
 ```js
 const computedObj = computed(() => {
   return {
-    isEven: count.value % 2 === 0 ? true : false
+    isEven: count.value % 2 === 0
   }
 })
 ```
@@ -152,9 +150,9 @@ Debido a que se crea un nuevo objeto cada vez, el nuevo valor es técnicamente s
 En su lugar, podemos optimizar esto comparando manualmente el nuevo valor con el valor antiguo y devolviendo condicionalmente el valor antiguo si sabemos que nada ha cambiado:
 
 ```js
-const computedObj = computed(oldValue => {
+const computedObj = computed((oldValue) => {
   const newValue = {
-    isEven: count.value % 2 === 0 ? true : false
+    isEven: count.value % 2 === 0
   }
   if (oldValue && oldValue.isEven === newValue.isEven) {
     return oldValue
@@ -163,7 +161,7 @@ const computedObj = computed(oldValue => {
 })
 ```
 
-[Ejemplo en la Zona de Práctica](https://play.vuejs.org/#eNqlVMlu2zAQ/ZUBgSZ24UpuczMkd4MPLdAFadEeyh4UibKVSKRADm2jhv+9Q1KyDTRRXOQggJrlzeO8Ge7Y27aN1lawGUtMrqsWwQi07ZzLqmmVRtiBFuUEctW0FkUxgU2G+WpRliJH2EOpVQOXhHDJJZe5kgYp1kqE1CWOpuOjXfikayvNzwpXyuKXFqum+pNhpWQX/+s3JfQwoeT9wb13pOriR1ZbAekcdlwCwaDVMpwBKrNYCzkLpKK1j3wGryBNU5jCa0BNhhmUWW2Ey9hzuX+Q8/mEz2YbUqXYdOYn8KakEo4VLi6gP0cBzSf3pTrbuC/Yta1POWB29j6tb8/JGIxG48N1BjUO14haa1ajAXW7sI7ffxU8p9rjpUorcy+cbYsMBVXzpeLYLUc33qggA53JguZfuN5K29wIfSIpafkpw1VU1krpkT+GeMJ7Di+nbjVc8FFfEgde0Ec6ExUukzjsJG0j/aBo2pro0B/Abtfx2HuRkhuLSITf5HWV36WcBeaczcNhmHQSh3SPnLjldwPhegqbIA+o03mm4sO73JGKA9S/iI/APYiVxCdNYBOGhnpdVsvo1ihJb5iXiTOndlUL7XBIC85m/ZBzltW12nz0NrdCk96er0R+d4/91mydjbOvWhih19TTgw8zvRQY3Itvn8WWzgdnowpbU/SA81oYVVvHMYS9s7Ig2idxnu0H/xJXcvndLLYopOkv5Yj6PfXxnNEz/H7g6ke6V9FV/9ax/V8w4Rl9)
+[Ejemplo en la Zona de Práctica](https://play.vuejs.org/#eNqVVMtu2zAQ/JUFgSZK4UpuczMkow/40AJ9IC3aQ9mDIlG2EokUyKVt1PC/d0lKtoEminMQQC1nZ4c7S+7Yu66L11awGUtNoesOwQi03ZzLuu2URtiBFtUECtV2FkU5gU2OxWpRVaJA2EOlVQuXxHDJJZeFkgYJayVC5hKj6dUxLnzSjZXmV40rZfFrh3Vb/82xVrLH//5DCQNNKPkweNiNVFP+zBsrIJvDjksgGrRahjVAbRZrIWdBVLz2yBfwBrIsg6mD7LncPyryfIVnywupUmz68HOEEqqCI+XFBQzrOKR79MDdx66GCn1jhpQDZx8f0oZ+nBgdRVcH/aMuBt1xZ80qGvGvh/X6nlXwnGpPl6qsLLxTtitzFFTNl0oSN/79AKOCHHQuS5pw4XorbXsr9ImHZN7nHFdx1SilI78MeOJ7Ca+nbvgd+GgomQOv6CNjSQqXaRJuHd03+kHRdg3JoT+A3a7XsfcmpbcWkQS/LZq6uM84C8o5m4fFuOg0CemeOXXX2w2E6ylsgj2gTgeYio/f1l5UEqj+Z3yC7lGuNDlpApswNNTrql7Gd0ZJeqW8TZw5t+tGaMdDXnA2G4acs7xp1OaTj6G2YjLEi5Uo7h+I35mti3H2TQsj9Jp6etjDXC8Fhu3F9y9iS+vDZqtK2xB6ZPNGGNVYpzHA3ltZkuwTnFf70b+1tVz+MIstCmmGQzmh/p56PGf00H4YOfpR7nV8PTxubP8P2GAP9Q==)
 
 Ten en cuenta que siempre debes realizar el cálculo completo antes de comparar y devolver el valor antiguo, para que las mismas dependencias se puedan recopilar en cada ejecución.
 

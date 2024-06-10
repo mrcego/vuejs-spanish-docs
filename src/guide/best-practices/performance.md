@@ -120,6 +120,53 @@ Ahora, para la mayoría de los componentes, la prop `active` seguirá siendo la 
 
 `v-once` es una directiva integrada que se puede usar para renderizar contenido que depende de datos en tiempo de ejecución pero que nunca necesita actualizarse. Todo el subárbol en el que se usa se omitirá para todas las actualizaciones futuras. Consulte la [referencia de su API](/api/built-in-directives#v-once) para más detalles.
 
+### Estabilidad de las Propiedades Computadas <sup class="vt-badge" data-text="3.4+" />
+
+A partir de la versión 3.4, una propiedad computada solo activará efectos cuando su valor computado haya cambiado desde el valor anterior. Por ejemplo, la propiedad computada `isEven` a continuación solo activará efectos si el valor devuelto ha cambiado de `true` a `false`, o viceversa:
+
+```js
+const count = ref(0)
+const isEven = computed(() => {
+  return count.value % 2 === 0 ? true : false
+})
+
+watchEffect(() => console.log(isEven.value)) // true
+
+// no activará nuevos registros porque el valor calculado sigue siendo `true`
+count.value = 2
+count.value = 4
+```
+
+Esto reduce las activaciones innecesarias de efectos, pero desafortunadamente no funciona si la computación crea un nuevo objeto en cada cálculo:
+
+```js
+const computedObj = computed(() => {
+  return {
+    isEven: count.value % 2 === 0 ? true : false
+  }
+})
+```
+
+Debido a que se crea un nuevo objeto cada vez, el nuevo valor es técnicamente siempre diferente del valor anterior. Incluso si la propiedad `isEven` permanece igual, Vue no podrá saberlo a menos que realice una comparación profunda del valor antiguo y el nuevo valor. Dicha comparación podría ser costosa y probablemente no valga la pena.
+
+En su lugar, podemos optimizar esto comparando manualmente el nuevo valor con el valor antiguo y devolviendo condicionalmente el valor antiguo si sabemos que nada ha cambiado:
+
+```js
+const computedObj = computed(oldValue => {
+  const newValue = {
+    isEven: count.value % 2 === 0 ? true : false
+  }
+  if (oldValue && oldValue.isEven === newValue.isEven) {
+    return oldValue
+  }
+  return newValue
+})
+```
+
+[Ejemplo en la Zona de Práctica](https://play.vuejs.org/#eNqlVMlu2zAQ/ZUBgSZ24UpuczMkd4MPLdAFadEeyh4UibKVSKRADm2jhv+9Q1KyDTRRXOQggJrlzeO8Ge7Y27aN1lawGUtMrqsWwQi07ZzLqmmVRtiBFuUEctW0FkUxgU2G+WpRliJH2EOpVQOXhHDJJZe5kgYp1kqE1CWOpuOjXfikayvNzwpXyuKXFqum+pNhpWQX/+s3JfQwoeT9wb13pOriR1ZbAekcdlwCwaDVMpwBKrNYCzkLpKK1j3wGryBNU5jCa0BNhhmUWW2Ey9hzuX+Q8/mEz2YbUqXYdOYn8KakEo4VLi6gP0cBzSf3pTrbuC/Yta1POWB29j6tb8/JGIxG48N1BjUO14haa1ajAXW7sI7ffxU8p9rjpUorcy+cbYsMBVXzpeLYLUc33qggA53JguZfuN5K29wIfSIpafkpw1VU1krpkT+GeMJ7Di+nbjVc8FFfEgde0Ec6ExUukzjsJG0j/aBo2pro0B/Abtfx2HuRkhuLSITf5HWV36WcBeaczcNhmHQSh3SPnLjldwPhegqbIA+o03mm4sO73JGKA9S/iI/APYiVxCdNYBOGhnpdVsvo1ihJb5iXiTOndlUL7XBIC85m/ZBzltW12nz0NrdCk96er0R+d4/91mydjbOvWhih19TTgw8zvRQY3Itvn8WWzgdnowpbU/SA81oYVVvHMYS9s7Ig2idxnu0H/xJXcvndLLYopOkv5Yj6PfXxnNEz/H7g6ke6V9FV/9ax/V8w4Rl9)
+
+Ten en cuenta que siempre debes realizar el cálculo completo antes de comparar y devolver el valor antiguo, para que las mismas dependencias se puedan recopilar en cada ejecución.
+
 ### `v-memo` {#v-memo}
 
 `v-memo` es una directiva integrada que se puede usar para omitir condicionalmente la actualización de grandes subárboles o listas `v-for`. Consulte la [referencia de su API](/api/built-in-directives#v-memo) para más detalles.

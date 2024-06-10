@@ -52,7 +52,7 @@ Toma una función getter y devuelve un objeto [ref](#ref) reactivo de solo lectu
   ```ts
   // solo lectura
   function computed<T>(
-    getter: () => T,
+    getter: (oldValue: T | undefined) => T,
     // véase el enlace "Depuración de Computed" más abajo
     debuggerOptions?: DebuggerOptions
   ): Readonly<Ref<Readonly<T>>>
@@ -60,7 +60,7 @@ Toma una función getter y devuelve un objeto [ref](#ref) reactivo de solo lectu
   // escribible
   function computed<T>(
     options: {
-      get: () => T
+      get: (oldValue: T | undefined) => T
       set: (value: T) => void
     },
     debuggerOptions?: DebuggerOptions
@@ -112,6 +112,7 @@ Toma una función getter y devuelve un objeto [ref](#ref) reactivo de solo lectu
   - [Guía - Propiedades Computadas](/guide/essentials/computed)
   - [Guía - Depuración Computada](/guide/extras/reactivity-in-depth#computed-debugging)
   - [Guía - Escritura de `computed()`](/guide/typescript/composition-api#typing-computed)
+  - [Guía - Rendimiento - Estabilidad de las Propiedades Computadas](/guide/best-practices/performance#computed-stability) <sup class="vt-badge" data-text="3.4+" />
 
 ## reactive() {#reactive}
 

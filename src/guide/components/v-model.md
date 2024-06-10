@@ -231,6 +231,7 @@ En el componente hijo, podemos admitir el argumento correspondiente pasando una 
 <script setup>
 const title = defineModel('title')
 </script>
+
 <template>
   <input type="text" v-model="title" />
 </template>

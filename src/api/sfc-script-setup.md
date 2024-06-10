@@ -235,12 +235,12 @@ Detrás de escena, esta macro declara una prop de model y un evento de actualiza
 
 ```js
 // declara la prop "modelValue", consumida por el padre mediante v-model
-const modelValue = defineModel()
+const model = defineModel()
 // O: declara la prop "modelValue" con opciones
-const modelValue = defineModel({ type: String })
+const model = defineModel({ type: String })
 
 // emite "update:modelValue" cuando se muta
-modelValue.value = 'hello'
+model.value = 'hello'
 
 // declara la prop "count", consumida por el padre mediante v-model:count
 const count = defineModel('count')
@@ -266,15 +266,17 @@ if (modelModifiers.trim) {
 }
 ```
 
-Usualmente, necesitamos transformar condicionalmente el valor leído desde o sincronizado de vuelta al padre cuando un modificador está presente. Podemos lograr esto mediante las opciones de transformador `get` y `set`:
+Cuando está presente un modificador, probablemente necesitemos transformar el valor al leerlo o sincronizarlo de vuelta con el padre. Podemos lograr esto utilizando las opciones de transformación `get` y `set`:
 
 ```js
 const [modelValue, modelModifiers] = defineModel({
   // get() omitido ya que no es necesario aquí
   set(value) {
+    // si se utiliza el modificador .trim, devuelve el valor recortado
     if (modelModifiers.trim) {
       return value.trim()
     }
+    // de lo contrario, devuelve el valor tal como está
     return value
   }
 })

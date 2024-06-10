@@ -233,13 +233,22 @@ La definición de tipos de Vue también proporciona inferencia de tipos para el 
 
 ### Inferencia de tipos JSX  {#jsx-type-inference}
 
-Similar a la transformación, JSX de Vue también necesita diferentes definiciones de tipos. Actualmente, los tipos de Vue registran automáticamente los tipos JSX de Vue de forma global. Esto significa que TSX funcionará de forma automática cuando los tipos de Vue estén disponibles.
+Similar a la transformación, JSX de Vue también necesita diferentes definiciones de tipos.
 
-Los tipos JSX globales pueden causar conflictos si se usan junto con otras bibliotecas que también necesitan la inferencia de tipos JSX, en particular React. A partir de la versión 3.3, Vue permite especificar el espacio de nombres JSX mediante la opción [jsxImportSource](https://www.typescriptlang.org/tsconfig#jsxImportSource) de TypeScript. Planeamos eliminar el registro global por defecto del espacio de nombres JSX en 3.4.
+Desde la versión 3.4, Vue ya no registra implícitamente el espacio de nombres global `JSX`. Para instruir a TypeScript para que use las definiciones de tipo JSX de Vue, asegúrate de incluir lo siguiente en tu `tsconfig.json`:
 
-Para los usuarios de TSX, se les sugiere establecer [jsxImportSource](https://www.typescriptlang.org/tsconfig#jsxImportSource) a `'vue'` en `tsconfig.json` después de actualizar a 3.3, u optar por archivo con `/* @jsxImportSource vue */`. Esto les permitirá optar por el nuevo comportamiento ahora y actualizar sin problemas cuando la versión 3.4 sea lanzada.
+```json
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "vue"
+    // ...
+  }
+}
+```
+También puedes optar por hacerlo por archivo agregando un comentario `/* @jsxImportSource vue */` en la parte superior del archivo.
 
-Si hay código que depende de la presencia del espacio de nombres global `JSX`, puedes conservar el comportamiento global exacto anterior a 3.4 haciendo referencia explícita a `vue/jsx`, que registra el espacio de nombres global `JSX`.
+Si hay código que depende de la presencia del espacio de nombres global `JSX`, puedes mantener el comportamiento global exacto anterior a la versión 3.4 importando o haciendo referencia explícitamente a `vue/jsx` en tu proyecto, lo cual registra el espacio de nombres global `JSX`.
 
 ## Recetas de Funciones de Renderizado {#render-function-recipes}
 

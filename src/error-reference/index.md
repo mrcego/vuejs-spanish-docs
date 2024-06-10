@@ -15,9 +15,9 @@
 
 En compilaciones de producción, el tercer argumento pasado a las siguientes APIs de manejo de errores será un código abreviado en lugar de la cadena de texto completa de información:
 
-- [`app.config.errorHandler`](/api/application.html#app-config-errorhandler)
-- [`onErrorCaptured`](/api/composition-api-lifecycle.html#onerrorcaptured) (Composicion API)
-- [`errorCaptured`](/api/options-lifecycle.html#errorcaptured) (Options API)
+- [`app.config.errorHandler`](/api/application#app-config-errorhandler)
+- [`onErrorCaptured`](/api/composition-api-lifecycle#onerrorcaptured) (Composicion API)
+- [`errorCaptured`](/api/options-lifecycle#errorcaptured) (Options API)
 
 La siguiente tabla mapea los códigos a sus cadenas de información originales completas.
 

@@ -227,6 +227,50 @@ const props = withDefaults(defineProps<Props>(), {
 
 Esto se compilará con las opciones equivalentes de props `default` en tiempo de ejecución. Además, el ayudante `withDefaults` proporciona comprobaciones de tipo para los valores por defecto, y garantiza que el tipo `props` devuelto tenga los indicadores opcionales eliminados para las propiedades que sí tienen valores por defecto declarados.
 
+## defineModel() <sup class="vt-badge" data-text="3.4+" /> {#definemodel}
+
+Esta macro se puede usar para declarar una propiedad de enlace bidireccional que puede ser consumida a través de `v-model` desde el componente padre, y puede ser declarada y mutada como una referencia. Esto declarará una propiedad con el mismo nombre y un evento correspondiente `update:propName`.
+
+Si el primer argumento es una cadena literal, se usará como el nombre de la propiedad; de lo contrario, el nombre de la propiedad por defecto será `"modelValue"`. En ambos casos, también puedes pasar un objeto adicional que se usará como opciones de la propiedad.
+
+```vue
+<script setup>
+const modelValue = defineModel({ type: String })
+modelValue.value = 'hello'
+const count = defineModel('count', { default: 0 })
+function inc() {
+  count.value++
+}
+</script>
+<template>
+  <input v-model="modelValue" />
+  <button @click="inc">incrementar</button>
+</template>
+```
+
+### Modo local
+
+El objeto de opciones también puede especificar una opción adicional, `local`. Cuando se establece en `true`, la referencia puede ser mutada localmente incluso si el padre no pasó el `v-model` correspondiente, esencialmente haciendo que el modelo sea opcional.
+
+```ts
+// modelo mutable local, puede ser mutado localmente
+// incluso si el padre no pasó el `v-model` correspondiente.
+const count = defineModel('count', { local: true, default: 0 })
+```
+
+### Proveer tipo de valor <sup class="vt-badge ts" /> {#provide-value-type}
+
+Al igual que `defineProps` y `defineEmits`, `defineModel` también puede recibir un argumento de tipo para especificar el tipo del valor del modelo:
+
+```ts
+const modelValue = defineModel<string>()
+//    ^? Ref<string | undefined>
+
+// modelo por defecto con opciones, `required` elimina posibles valores `undefined`
+const modelValue = defineModel<string>({ required: true })
+//    ^? Ref<string>
+```
+
 ## defineExpose() {#defineexpose}
 
 Los componentes que utilizan `<script setup>` **están cerrados por defecto**, es decir, la instancia pública del componente, que se recupera a través de las refs de plantilla o de las cadenas `$parent`, **no** expondrá ninguno de los enlaces declarados dentro de `<script setup>`.
@@ -249,7 +293,7 @@ defineExpose({
 
 Cuando un padre obtiene una instancia de este componente a través de refs de plantilla, la instancia recuperada tendrá la forma `{ a: number, b: number }` (las refs se desenvuelven automáticamente como en las instancias normales).
 
-## defineOptions() {#defineoptions}
+## defineOptions() <sup class="vt-badge" data-text="3.3+" /> {#defineoptions}
 
 Esta macro puede usarse para declarar opciones de componentes directamente dentro de `<script setup>` sin tener que usar un bloque `<script>` separado:
 
@@ -389,5 +433,5 @@ defineProps<{
 
 ## Restricciones {#restrictions}
 
-* Debido a la diferencia en la semántica de ejecución del módulo, el código dentro de `<script setup>` depende del contexto de un SFC. Cuando se mueve a archivos externos `.js` o `.ts`, puede generar confusión tanto para los desarrolladores como para las herramientas. Por lo tanto, **`<script setup>`** no se puede utilizar con el atributo `src`.
-* `<script setup>` no soporta Plantilla de Componente Raíz en el DOM.([Discusión relacionada](https://github.com/vuejs/core/issues/8391))
+- Debido a la diferencia en la semántica de ejecución del módulo, el código dentro de `<script setup>` depende del contexto de un SFC. Cuando se mueve a archivos externos `.js` o `.ts`, puede generar confusión tanto para los desarrolladores como para las herramientas. Por lo tanto, **`<script setup>`** no se puede utilizar con el atributo `src`.
+- `<script setup>` no soporta Plantilla de Componente Raíz en el DOM.([Discusión relacionada](https://github.com/vuejs/core/issues/8391))

@@ -229,46 +229,70 @@ Esto se compilará con las opciones equivalentes de props `default` en tiempo de
 
 ## defineModel() <sup class="vt-badge" data-text="3.4+" /> {#definemodel}
 
-Esta macro se puede usar para declarar una propiedad de enlace bidireccional que puede ser consumida a través de `v-model` desde el componente padre, y puede ser declarada y mutada como una referencia. Esto declarará una propiedad con el mismo nombre y un evento correspondiente `update:propName`.
+Esta macro se puede usar para declarar una propiedad de enlace bidireccional que puede ser consumida a través de `v-model` desde el componente padre. El ejemplo de uso también se discute en la guía [Componente `v-model`](/guide/components/v-model).
 
-Si el primer argumento es una cadena literal, se usará como el nombre de la propiedad; de lo contrario, el nombre de la propiedad por defecto será `"modelValue"`. En ambos casos, también puedes pasar un objeto adicional que se usará como opciones de la propiedad.
+Detrás de escena, esta macro declara una prop de model y un evento de actualización de valor correspondiente. Si el primer argumento es una cadena literal, se usará como el nombre de la prop; de lo contrario, el nombre de la prop será `"modelValue"` por defecto. En ambos casos, también se puede pasar un objeto adicional que puede incluir las opciones de la prop y las opciones de transformación del valor del model.
 
-```vue
-<script setup>
+```js
+// declara la prop "modelValue", consumida por el padre mediante v-model
+const modelValue = defineModel()
+// O: declara la prop "modelValue" con opciones
 const modelValue = defineModel({ type: String })
+
+// emite "update:modelValue" cuando se muta
 modelValue.value = 'hello'
-const count = defineModel('count', { default: 0 })
+
+// declara la prop "count", consumida por el padre mediante v-model:count
+const count = defineModel('count')
+// O: declara la prop "count" con opciones
+const count = defineModel('count', { type: Number, default: 0 })
+
 function inc() {
+  // emite "update:count" cuando se muta
   count.value++
 }
-</script>
-<template>
-  <input v-model="modelValue" />
-  <button @click="inc">incrementar</button>
-</template>
 ```
 
-### Modo local
+### Modificadores y Transformadores
 
-El objeto de opciones también puede especificar una opción adicional, `local`. Cuando se establece en `true`, la referencia puede ser mutada localmente incluso si el padre no pasó el `v-model` correspondiente, esencialmente haciendo que el modelo sea opcional.
+Para acceder a los modificadores usados con la directiva `v-model`, podemos desestructurar el valor de retorno de `defineModel()` de esta manera:
 
-```ts
-// modelo mutable local, puede ser mutado localmente
-// incluso si el padre no pasó el `v-model` correspondiente.
-const count = defineModel('count', { local: true, default: 0 })
+```js
+const [modelValue, modelModifiers] = defineModel()
+
+// corresponde a v-model.trim
+if (modelModifiers.trim) {
+  // ...
+}
 ```
 
-### Proveer tipo de valor <sup class="vt-badge ts" /> {#provide-value-type}
+Usualmente, necesitamos transformar condicionalmente el valor leído desde o sincronizado de vuelta al padre cuando un modificador está presente. Podemos lograr esto mediante las opciones de transformador `get` y `set`:
 
-Al igual que `defineProps` y `defineEmits`, `defineModel` también puede recibir un argumento de tipo para especificar el tipo del valor del modelo:
+```js
+const [modelValue, modelModifiers] = defineModel({
+  // get() omitido ya que no es necesario aquí
+  set(value) {
+    if (modelModifiers.trim) {
+      return value.trim()
+    }
+    return value
+  }
+})
+```
+
+### Uso con TypeScript <sup class="vt-badge ts" /> {#usage-with-typescript}
+
+Al igual que `defineProps` y `defineEmits`, `defineModel` también puede recibir argumentos de tipo para especificar los tipos del valor del modelo y los modificadores:
 
 ```ts
 const modelValue = defineModel<string>()
 //    ^? Ref<string | undefined>
-
-// modelo por defecto con opciones, `required` elimina posibles valores `undefined`
+// model por defecto con opciones, required elimina posibles valores indefinidos
 const modelValue = defineModel<string>({ required: true })
 //    ^? Ref<string>
+
+const [modelValue, modifiers] = defineModel<string, 'trim' | 'uppercase'>()
+//                 ^? Record<'trim' | 'uppercase', true | undefined>
 ```
 
 ## defineExpose() {#defineexpose}

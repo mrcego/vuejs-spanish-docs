@@ -1,12 +1,12 @@
 <script setup>
-  import { ref, onMounted } from 'vue'
-  import { data } from './errors.data.ts'
-  import ErrorsTable from './ErrorsTable.vue'
+import { ref, onMounted } from 'vue'
+import { data } from './errors.data.ts'
+import ErrorsTable from './ErrorsTable.vue'
 
-  const highlight = ref()
-  onMounted(() => {
-    highlight.value = location.hash.slice(1)
-  })
+const highlight = ref()
+onMounted(() => {
+  highlight.value = location.hash.slice(1)
+})
 </script>
 
 # Referencia de Códigos de Error en Producción {#error-reference}
@@ -16,7 +16,7 @@
 En compilaciones de producción, el tercer argumento pasado a las siguientes APIs de manejo de errores será un código abreviado en lugar de la cadena de texto completa de información:
 
 - [`app.config.errorHandler`](/api/application#app-config-errorhandler)
-- [`onErrorCaptured`](/api/composition-api-lifecycle#onerrorcaptured) (Composicion API)
+- [`onErrorCaptured`](/api/composition-api-lifecycle#onerrorcaptured) (Composition API)
 - [`errorCaptured`](/api/options-lifecycle#errorcaptured) (Options API)
 
 La siguiente tabla mapea los códigos a sus cadenas de información originales completas.

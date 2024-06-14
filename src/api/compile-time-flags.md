@@ -5,7 +5,7 @@ outline: deep
 # Banderas de tiempo de compilación {#compile-time-flags}
 
 :::tip
-Las banderas de tiempo de compilación solo se aplican cuando se utiliza la construcción `esm-bundler` de Vue (es decir, `vue/dist/vue.esm-bundler.js`).
+Las banderas de tiempo de compilación solo se aplican cuando se utiliza la compilación `esm-bundler` de Vue (es decir, `vue/dist/vue.esm-bundler.js`).
 :::
 
 Cuando se utiliza Vue con un paso de compilación, es posible configurar varias banderas de tiempo de compilación para habilitar/deshabilitar ciertas características. El beneficio de usar banderas de tiempo de compilación es que las características deshabilitadas de esta manera pueden eliminarse del paquete final mediante tree-shaking.

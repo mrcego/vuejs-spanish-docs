@@ -372,7 +372,7 @@ Asigna un manejador global para los errores no capturados que se propagan desde 
   - Hooks de transiciones
 
 :::tip
-En producción, el tercer argumento (`info`) será un código abreviado en lugar de la cadena de texto de información completa. Puedes encontrar la correspondencia entre el código y la cadena de texto en la [Referencia de Códigos de Error en Producción](/error-reference/#runtime-errors)..
+En producción, el tercer argumento (`info`) será un código abreviado en lugar de la cadena de texto de información completa. Puedes encontrar la correspondencia entre el código y la cadena de texto en la [Referencia de Códigos de Error en Producción](/error-reference/#runtime-errors).
 :::
 
 - **Ejemplo**

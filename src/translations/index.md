@@ -19,6 +19,7 @@ aside: false
 ## Idiomas en Curso {#work-in-progress-languages}
 
 - [فارسی / Persian](https://fa.vuejs.org/) [[fuente](https://github.com/vuejs-translations/docs-fa)]
+- [Čeština / Czech](https://cs.vuejs.org/) [[source](https://github.com/vuejs-translations/docs-cs)]
 - [Español / Español](https://vue3-spanish.netlify.app/) [[fuente](https://github.com/drfcozapata/docs/tree/spanish-translation)]
 
 ## Iniciar una nueva Traducción {#starting-a-new-translation}

@@ -405,7 +405,7 @@ defineProps({
     }
   },
   // Función de validación personalizada
-  // Todas las props completas pasadas como segundo argumento en la versión 3.4 o superior
+  // Todas las props completas pasadas como 2do argumento en la versión 3.4 o superior
   propF: {
     validator(value, props) {
       // El valor debe coincidir con una de estas cadenas
@@ -460,7 +460,7 @@ export default {
       }
     },
     // Función de validación personalizada
-    // Todas las props completas pasadas como segundo argumento en la versión 3.4 o superior
+    // Todas las props completas pasadas como 2do argumento en la versión 3.4 o superior
     propF: {
       validator(value, props) {
         // El valor debe coincidir con una de estas cadenas

@@ -233,7 +233,7 @@ La definición de tipos de Vue también proporciona inferencia de tipos para el 
 
 ### Inferencia de tipos JSX  {#jsx-type-inference}
 
-Similar a la transformación, JSX de Vue también necesita diferentes definiciones de tipos.
+Similar a la transformación, el JSX de Vue también necesita diferentes definiciones de tipos.
 
 Desde la versión 3.4, Vue ya no registra implícitamente el espacio de nombres global `JSX`. Para instruir a TypeScript para que use las definiciones de tipo JSX de Vue, asegúrate de incluir lo siguiente en tu `tsconfig.json`:
 

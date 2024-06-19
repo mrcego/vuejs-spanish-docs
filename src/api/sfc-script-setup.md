@@ -229,9 +229,9 @@ Esto se compilará con las opciones equivalentes de props `default` en tiempo de
 
 ## defineModel() <sup class="vt-badge" data-text="3.4+" /> {#definemodel}
 
-Esta macro se puede usar para declarar una propiedad de enlace bidireccional que puede ser consumida a través de `v-model` desde el componente padre. El ejemplo de uso también se discute en la guía [Componente `v-model`](/guide/components/v-model).
+Esta macro se puede usar para declarar una propiedad de enlace bidireccional que puede ser consumida a través de `v-model` desde el componente padre. El ejemplo de su uso también se discute en la guía [Componente `v-model`](/guide/components/v-model).
 
-Detrás de escena, esta macro declara una prop model y un evento de actualización de valor correspondiente. Si el primer argumento es una cadena literal, se usará como el nombre de la prop; de lo contrario, el nombre de la prop será `"modelValue"` por defecto. En ambos casos, también se puede pasar un objeto adicional que puede incluir las opciones de la prop y las opciones de transformación del valor del model.
+Detrás de escena, esta macro declara una propiedad model y un evento de actualización de valor correspondiente. Si el primer argumento es una cadena literal, se usará como el nombre de la prop; de lo contrario, el nombre de la prop será `"modelValue"` por defecto. En ambos casos, también se puede pasar un objeto adicional que puede incluir las opciones de la prop y las opciones de transformación del valor de la ref del model.
 
 ```js
 // declara la prop "modelValue", consumida por el padre mediante v-model

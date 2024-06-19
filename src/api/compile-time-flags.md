@@ -5,7 +5,7 @@ outline: deep
 # Banderas de tiempo de compilación {#compile-time-flags}
 
 :::tip
-Las banderas de tiempo de compilación solo se aplican cuando se utiliza la compilación `esm-bundler` de Vue (es decir, `vue/dist/vue.esm-bundler.js`).
+Las banderas de tiempo de compilación solo se aplican cuando se utiliza la versión `esm-bundler` de Vue (es decir, `vue/dist/vue.esm-bundler.js`).
 :::
 
 Cuando se utiliza Vue con un paso de compilación, es posible configurar varias banderas de tiempo de compilación para habilitar/deshabilitar ciertas características. El beneficio de usar banderas de tiempo de compilación es que las características deshabilitadas de esta manera pueden eliminarse del paquete final mediante tree-shaking.
@@ -44,7 +44,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   define: {
-    // Habilitar detalles de desajustes de hidratación en compilación de producción.
+    // Habilitar detalles de discrepancias de hidratación en compilación de producción.
     __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'true'
   }
 })
@@ -90,7 +90,7 @@ module.exports = {
 
 ### Rollup
 
-Las banderas deben definirse utilizando [@rollup/plugin-replace](https://github.com/rollup/plugins/tree/master/packages/replace).
+Las banderas deben definirse utilizando [@rollup/plugin-replace](https://github.com/rollup/plugins/tree/master/packages/replace):
 
 ```js
 // rollup.config.js

@@ -6,7 +6,7 @@
 
 <div class="composition-api">
 
-A partir de Vue 3.4, el enfoque recomendado para lograr esto es usando la macro `defineModel()`
+A partir de Vue 3.4, el método recomendado para lograr esto es usando la macro [`defineModel()`](/api/sfc-script-setup#definemodel):
 
 ```vue
 <!-- Child.vue -->
@@ -74,7 +74,7 @@ const emit = defineEmits(['update:modelValue'])
 
 Como puedes ver, es un poco más largo. Sin embargo, es útil entender qué está sucediendo internamente.
 
-Dado que `defineModel` declara una prop, puedes declarar las opciones de la prop subyacente pasándola a `defineModel`:
+Dado que `defineModel` declara una prop, puedes declarar las opciones de la prop asociadas pasándola a `defineModel`:
 
 ```js
 // Haciendo que el v-model sea obligatorio
@@ -195,7 +195,7 @@ const title = defineModel('title')
 
 [Pruébalo en la Zona de Práctica](https://play.vuejs.org/#eNqFkl9PwjAUxb9K05dhglsMb2SQqOFBE9Soj31Zxh0Uu7bpHxxZ9t29LWOiQXzaes7p2a+9a+mt1unOA53S3JaGa0csOK/nTPJaK+NISwxUpCOVUTVJMJoM1nJ/r/BNgnS9nWYnWujFMCFMlkpaRxx3AsgsFI6S3XWtViBIYda+Dg3QFLUWkFwxmWcHFqTAhQPUCwe4IiTf3Mzbtq/qujzDddRPYfruaUzNGI1PRkmG0Twb+uiY/sI9cw0/0VdQcQnL0D5KovgfL5fa4/69jiDQOOTo+S6SOYtfrvg63VolkauNN0lLxOUCzLN2HMkYnZLoBK8QQn0+Rs0ZD+OjXm6g/Dijb20TNEZfDFgwOwQZPIdzAWQN9uLtKXIPJtL7gH3BfAWrhA+Mh9idlyvEPslF2of4J3G5freLxoG0x0MF0JDsYp5RHE6Y1F9H/8adpJO4j8mOdl/Hw/nf)
 
-Si también se necesitan opciones de prop, deben pasarse después del nombre del modelo:
+Si también se necesitan opciones de prop, deben pasarse después del nombre del model:
 
 ```js
 const title = defineModel('title', { required: true })
@@ -345,7 +345,7 @@ export default {
 
 Cuando estábamos aprendiendo sobre las vinculaciones de entrada de formularios, vimos que `v-model` tiene [modificadores integrados](/guide/essentials/forms#modifiers): `.trim`, `.number` y `.lazy`. En algunos casos, es posible que también desees que el `v-model` en tu componente de entrada personalizado admita modificadores personalizados.
 
-Creemos un ejemplo de modificador personalizado, `capitalize`, que capitalice la primera letra de la cadena proporcionada por la vinculación `v-model`:
+Creemos un ejemplo de modificador personalizado, `capitalize`, que capitalice la primera letra de la cadena de texto proporcionada por la vinculación de `v-model`:
 
 ```vue-html
 <MyComponent v-model.capitalize="myText" />
@@ -367,7 +367,7 @@ console.log(modifiers) // { capitalize: true }
 </template>
 ```
 
-Para ajustar condicionalmente cómo debe ser leído o escrito el valor en función de los modificadores, podemos pasar opciones `get` y `set` a `defineModel()`. Estas dos opciones reciben el valor en la obtención / establecimiento de la referencia del modelo y deben devolver un valor transformado. Así es como podemos utilizar la opción `set` para implementar el modificador `capitalize`:
+Para ajustar condicionalmente cómo debe ser leído o escrito el valor en función de los modificadores, podemos pasar opciones `get` y `set` a `defineModel()`. Estas dos opciones reciben el valor en la obtención / establecimiento de la ref del model y deben devolver un valor transformado. Así es como podemos utilizar la opción `set` para implementar el modificador `capitalize`:
 
 ```vue{6-8}
 <script setup>
@@ -450,9 +450,9 @@ export default {
 </template>
 ```
 
-Observa que la propiedad `modelModifiers` del componente contiene `capitalize` y su valor es `true`, debido a que se establece en el enlace `v-model.capitalize="myText"`.
+Observa que la propiedad `modelModifiers` del componente contiene `capitalize` y su valor es `true`, debido a que se estableció en la vinculación `v-model` como `v-model.capitalize="myText"`.
 
-Ahora que tenemos nuestra propiedad configurada, podemos verificar las claves del objeto `modelModifiers` y escribir un controlador para cambiar el valor emitido. En el código a continuación, capitalizaremos la cadena cada vez que el elemento `<input />` genere un evento `input`.
+Ahora que tenemos nuestra propiedad configurada, podemos verificar las claves del objeto `modelModifiers` y escribir un controlador para cambiar el valor emitido. En el código a continuación, capitalizaremos la cadena de texto cada vez que el elemento `<input />` genere un evento `input`.
 
 ```vue{13-15}
 <script>

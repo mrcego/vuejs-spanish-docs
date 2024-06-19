@@ -13,7 +13,7 @@ onMounted(() => {
 
 ## Errores de Tiempo de Ejecución {#runtime-errors}
 
-En compilaciones de producción, el tercer argumento pasado a las siguientes APIs de manejo de errores será un código abreviado en lugar de la cadena de texto completa de información:
+En compilaciones de producción, el 3er argumento pasado a las siguientes APIs de manejo de errores será un código abreviado en lugar de la cadena de texto completa de información:
 
 - [`app.config.errorHandler`](/api/application#app-config-errorhandler)
 - [`onErrorCaptured`](/api/composition-api-lifecycle#onerrorcaptured) (Composition API)

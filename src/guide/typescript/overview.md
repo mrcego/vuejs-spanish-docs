@@ -48,7 +48,7 @@ Al configurar `tsconfig.json` manualmente, algunas opciones significativas son:
 
 - Si has configurado alias de resolución en tu herramienta de construcción, por ejemplo el alias `@/*` configurado por defecto en un proyecto `create-vue`, necesitas configurarlo también para TypeScript a través de [`compilerOptions.paths`](https://www.typescriptlang.org/tsconfig#paths).
 
-- Si tienes la intención de usar TSX con Vue, configura [`compilerOptions.jsx`](https://www.typescriptlang.org/tsconfig#jsx) en `"preserve"`, y [`compilerOptions.jsxImportSource`](https://www.typescriptlang.org/tsconfig#jsxImportSource) en `"vue"`.
+- Si tienes la intención de usar TSX con Vue, establece [`compilerOptions.jsx`](https://www.typescriptlang.org/tsconfig#jsx) a `"preserve"`, y [`compilerOptions.jsxImportSource`](https://www.typescriptlang.org/tsconfig#jsxImportSource) a `"vue"`.
 
 Véase también:
 

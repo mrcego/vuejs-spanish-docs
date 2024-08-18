@@ -26,7 +26,7 @@ const show = ref(true)
 
 .transition-demo-inner {
   background: #ccc;
-  color: rgb(33, 53, 72);
+  color: rgb(33, 53, 71);
 }
 
 .nested-enter-active,

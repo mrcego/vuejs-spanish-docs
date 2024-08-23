@@ -1,6 +1,6 @@
 # Componente v-model {#component-v-model}
 
-## Uso básico
+## Uso básico {#basic-usage}
 
 `v-model` se puede usar en un componente para implementar una vinculación bidireccional.
 
@@ -49,7 +49,7 @@ const model = defineModel()
 
 [Pruébalo en la Zona de Práctica](https://play.vuejs.org/#eNqFUtFKwzAU/ZWYl06YLbK30Q10DFSYigq+5KW0t11mmoQknZPSf/cm3eqEsT0l555zuefmpKV3WsfbBuiUpjY3XDtiwTV6ziSvtTKOLNZcFKQ0qiZRnATkG6JB0BIDJen2kp5iMlfSOlLbisw8P4oeQAhFPpURxVV0zWSa9PNwEgIHtRaZA0SEpOvbeduG5q5LE0Sh2jvZ3tSqADFjFHlGSYJkmhz10zF1FseXvIo3VklcrfX9jOaq1lyAedGOoz1GpyQwnsvQ3fdTqDnTwPhQz9eQf52ob+zO1xh9NWDBbIHRgXOZqcD19PL9GXZ4H0h03whUnyHfwCrReI+97L6RBdo+0gW3j+H9uaw+7HLnQNrDUt6oV3ZBzyhmsjiz+p/dSTwJfUx2+IpD1ic+xz5enwQGXEDJJaw8Gl2I1upMzlc/hEvdOBR6SNKAjqP1J6P/o6XdL11L5h4=)
 
-### Detrás de escena
+### Detrás de escena {#under-the-hood}
 
 `defineModel` es un macro de conveniencia. El compilador lo expande a lo siguiente:
 

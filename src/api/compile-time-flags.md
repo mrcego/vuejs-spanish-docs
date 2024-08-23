@@ -14,27 +14,27 @@ Vue funcionará incluso si estas banderas no están configuradas explícitamente
 
 Consulta las [Guías de configuración](#configuration-guides) sobre cómo configurarlas según la herramienta de compilación.
 
-## `__VUE_OPTIONS_API__`
+## `__VUE_OPTIONS_API__` {#VUE_OPTIONS_API}
 
 - **Por defecto:** `true`
 
   Habilita/deshabilita el soporte de Options API. Desactivar esto resultará en paquetes más pequeños, pero puede afectar la compatibilidad con bibliotecas de terceros si dependen del Options API.
 
-## `__VUE_PROD_DEVTOOLS__`
+## `__VUE_PROD_DEVTOOLS__` {#VUE_PROD_DEVTOOLS}
 
 - **Por defecto:** `false`
 
   Habilita/deshabilita el soporte de herramientas de desarrollo (devtools) en compilaciones de producción. Esto resultará en más código incluido en el paquete, por lo que se recomienda habilitarlo solo con fines de depuración.
 
-## `__VUE_PROD_HYDRATION_MISMATCH_DETAILS__` <sup class="vt-badge" data-text="3.4+" />
+## `__VUE_PROD_HYDRATION_MISMATCH_DETAILS__` <sup class="vt-badge" data-text="3.4+" /> {#VUE_PROD_HYDRATATION_MISMATCH_DETAILS}
 
 - **Por defecto:** `false`
 
   Habilita/deshabilita advertencias detalladas para discrepancias de hidratación en compilaciones de producción. Esto resultará en más código incluido en el paquete, por lo que se recomienda habilitarlo solo con fines de depuración.
 
-## Guías de configuración
+## Guías de configuración {#configuration-guides}
 
-### Vite
+### Vite {#vite}
 
 `@vitejs/plugin-vue` proporciona automáticamente valores por defecto para estas banderas. Para cambiar los valores por defecto, utiliza la opción de configuración `define` de Vite. Puedes encontrar más información sobre cómo hacerlo en la [documentación de opciones compartidas de Vite](https://es.vitejs.dev/config/shared-options.html#define).
 
@@ -50,7 +50,7 @@ export default defineConfig({
 })
 ```
 
-### vue-cli
+### vue-cli {#vue-cli}
 
 El servicio `@vue/cli-service` proporciona automáticamente valores por defecto para algunas de estas banderas. Para configurar/cambiar los valores:
 
@@ -70,7 +70,7 @@ module.exports = {
 }
 ```
 
-### webpack
+### webpack {#webpack}
 
 Las banderas deben definirse utilizando el [DefinePlugin](https://webpack.js.org/plugins/define-plugin/) de webpack.
 
@@ -88,7 +88,7 @@ module.exports = {
 }
 ```
 
-### Rollup
+### Rollup {#rollup}
 
 Las banderas deben definirse utilizando [@rollup/plugin-replace](https://github.com/rollup/plugins/tree/master/packages/replace):
 

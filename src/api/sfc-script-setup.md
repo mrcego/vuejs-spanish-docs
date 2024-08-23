@@ -253,7 +253,7 @@ function inc() {
 }
 ```
 
-### Modificadores y Transformadores
+### Modificadores y Transformadores {#modifiers-and-transformers}
 
 Para acceder a los modificadores usados con la directiva `v-model`, podemos desestructurar el valor de retorno de `defineModel()` de esta manera:
 

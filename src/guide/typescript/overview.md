@@ -210,7 +210,7 @@ let x: string | number = 1
 Si se utiliza Vue CLI o una configuración basada en webpack, TypeScript requiere `vue-loader@^16.8.0` en las expresiones de plantilla.
 :::
 
-### Uso con TSX
+### Uso con TSX {#usage-with-tsx}
 
 Vue también soporta la creación de componentes con JSX / TSX. Los detalles están cubiertos en la guía [Funciones de Renderizado y JSX](/guide/extras/render-function.html#jsx-tsx).
 

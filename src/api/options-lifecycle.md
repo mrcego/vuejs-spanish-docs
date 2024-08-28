@@ -193,7 +193,11 @@ Se llama cuando se ha capturado un error que se propaga desde un componente desc
   - Hooks de directiva personalizados
   - Hooks de transición
 
-  El hook recibe tres argumentos: el error, la instancia del componente que desencadenó el error y una cadena de información que especifica el tipo de origen del error.
+  El hook recibe tres argumentos: el error, la instancia del componente que desencadenó el error y una cadena de texto de información que especifica el tipo de origen del error.
+
+  :::tip
+  En producción, el tercer argumento (`info`) será un código abreviado en lugar de la cadena de texto de información completa. Puedes encontrar la correspondencia entre el código y la cadena de texto en la [Referencia de Códigos de Error en Producción](/error-reference/#runtime-errors).
+  :::
 
   Puede modificar el estado del componente en `errorCaptured()` para mostrar un estado de error al usuario. Sin embargo, es importante que el estado de error no debe renderizar el contenido original que causó el error; de lo contrario el componente será lanzado a un bucle de renderización infinito.
 

@@ -30,7 +30,7 @@ Si vas a usar el modo HTML sin un paso de compilación en tus propias aplicacion
 import { ... } from 'vue/dist/vue.esm-bundler.js'
 ```
 
-dentro de tus scripts o configura tu herramienta de construcción para resolver vue en consecuencia. Ejemplo de configuración para [Vite](https://vitejs.dev/):
+dentro de tus scripts o configura tu herramienta de compilación para resolver vue en consecuencia. Ejemplo de configuración para [Vite](https://vitejs.dev/):
 
 ```js
 // vite.config.js

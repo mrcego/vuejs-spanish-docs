@@ -335,7 +335,7 @@ Similar a las actualizaciones de componentes, los callbacks de los watchers crea
 
 Por defecto, el callback de un watcher se llama *después* de las actualizaciones del componente padre (si las hay) y *antes* de que se actualice el DOM del componente que lo posee. Esto significa que, si intentas acceder al propio DOM del componente que lo posee en el callback del watcher, el DOM estará en un estado previo a la actualización.
 
-### Post Watchers
+### Post Watchers {#post-watchers}
 
 Si deseas acceder al DOM del componente que lo posee en el callback de un watcher *después* de que Vue lo haya actualizado, necesitas especificar la opción `flush: 'post'`:
 
@@ -379,7 +379,7 @@ watchPostEffect(() => {
 
 </div>
 
-### Sincronización de Watchers
+### Sincronización de Watchers {#sync-watchers}
 
 También es posible crear un watcher que se dispare de forma sincrónica, antes de cualquier actualización gestionada por Vue:
 

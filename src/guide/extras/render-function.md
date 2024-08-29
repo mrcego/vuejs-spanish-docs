@@ -568,7 +568,7 @@ JSX equivalente:
 
 Pasar los slots como funciones permite que sean invocados de forma perezosa por el componente hijo. Esto lleva a que las dependencias del slot sean rastreadas por el hijo en lugar del padre, lo que resulta en actualizaciones más precisas y eficientes.
 
-### Slots con Scope
+### Slots con Scope {#scoped-slots}
 
 Para renderizar un slot con scope en el componente padre, se pasa un slot al hijo. Observa cómo el slot ahora tiene un parámetro `text`. El slot será llamado en el componente hijo y los datos del componente hijo serán pasados al componente padre.
 

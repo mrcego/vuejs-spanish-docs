@@ -568,6 +568,41 @@ JSX equivalente:
 
 Pasar los slots como funciones permite que sean invocados de forma perezosa por el componente hijo. Esto lleva a que las dependencias del slot sean rastreadas por el hijo en lugar del padre, lo que resulta en actualizaciones más precisas y eficientes.
 
+### Slots con Scope {#scoped-slots}
+
+Para renderizar un slot con scope en el componente padre, se pasa un slot al hijo. Observa cómo el slot ahora tiene un parámetro `text`. El slot será llamado en el componente hijo y los datos del componente hijo serán pasados al componente padre.
+
+```js
+// componente padre
+export default {
+  setup() {
+    return () => h(MyComp, null, {
+      default: ({ text }) => h('p', text)
+    })
+  }
+}
+```
+
+Recuerda pasar `null` para que los slots no sean tratados como props.
+
+```js
+// componente hijo
+export default {
+  setup(props, { slots }) {
+    const text = ref('hi')
+    return () => h('div', null, slots.default({ text: text.value }))
+  }
+}
+```
+
+Equivalente en JSX:
+
+```jsx
+<MyComponent>{{
+  default: ({ text }) => <p>{ text }</p>
+}}</MyComponent>
+```
+
 ### Componentes Integrados {#built-in-components}
 
 [Los componentes integrados](/api/built-in-components) como `<KeepAlive>`, `<Transition>`, `<TransitionGroup>`, `<Teleport>` y `<Suspense>` deben ser importados para su uso en las funciones de renderizado:

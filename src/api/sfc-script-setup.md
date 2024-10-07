@@ -254,7 +254,7 @@ function inc() {
 ```
 
 :::warning
-Si tienes un valor `default` para `defineModel` prop y no proporcionas ningún valor para esta prop desde el componente padre, puede causar una desincronización entre el componente padre y el componente hijo. En el ejemplo siguiente, el `myRef` del padre es indefinido, pero el `model` del hijo es 1:
+Si tienes un valor `default` para la prop `defineModel` y no proporcionas ningún valor para esta prop desde el componente padre, puede causar una desincronización entre el componente padre y el componente hijo. En el ejemplo siguiente, el `myRef` del padre es indefinido, pero el `model` del hijo es 1:
 
 ```js
 // componente hijo:

@@ -84,6 +84,23 @@ const model = defineModel({ required: true })
 const model = defineModel({ default: 0 })
 ```
 
+:::warning
+Si tienes un valor `default` para `defineModel` prop y no proporcionas ningún valor para esta prop desde el componente padre, puede causar una desincronización entre el componente padre y el componente hijo. En el ejemplo siguiente, el `myRef` del padre es indefinido, pero el `model` del hijo es 1:
+
+```js
+// componente hijo:
+const model = defineModel({ default: 1 })
+
+// componente padre:
+const myRef = ref()
+```
+
+```html
+<Child v-model="myRef"></Child>
+```
+
+:::
+
 </div>
 
 <div class="options-api">

@@ -519,6 +519,7 @@ El `tipo` puede ser uno de los siguientes constructores nativos:
 - `Date`
 - `Function`
 - `Symbol`
+- `Error`
 
 Además, `type` también puede ser una clase o función constructora personalizada y la declaración será realizada con una comprobación `instanceof`. Por ejemplo, dada la siguiente clase:
 

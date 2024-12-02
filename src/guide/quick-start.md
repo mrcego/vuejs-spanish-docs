@@ -366,7 +366,7 @@ Los mapas de importación es una función relativamente nueva de los navegadores
 :::warning Notas sobre el Uso en Producción
 Los ejemplos mostrados hasta ahora usan la versión de desarrollo de Vue. Si quieres usar Vue desde un CDN en producción, asegúrate de consultar la guía de [Implementación en Producción (Deployment)](/guide/best-practices/production-deployment#without-build-tools).
 
-Mientras que es posible usar Vue sin un sistema de compilación, una alternativa a considerar es usar [`vuejs/petite-vue`](https://github.com/vuejs/petite-vue) que podría ser más adecuado para el contexto donde [`jquery/jquery`](https://github.com/jquery/jquery) (en el pasado) o [`alpinejs/alpine`](https://github.com/alpinejs/alpine) (en el presente) podrían ser usados en su lugar.
+Aunque es posible usar Vue sin un sistema de compilación, una alternativa a considerar es usar [`vuejs/petite-vue`](https://github.com/vuejs/petite-vue) que podría ser más adecuado para el contexto donde [`jquery/jquery`](https://github.com/jquery/jquery) (en el pasado) o [`alpinejs/alpine`](https://github.com/alpinejs/alpine) (en el presente) podrían ser usados en su lugar.
 :::
 
 ### Distribución de los Módulos {#splitting-up-the-modules}

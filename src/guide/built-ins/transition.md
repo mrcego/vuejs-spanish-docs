@@ -585,7 +585,7 @@ También puedes aplicar diferentes comportamientos en los hooks transition de Ja
 
 A veces necesitas forzar el re-render de un elemento del DOM para que se produzca una transición.
 
-Tomemos este componente de contador como ejemplo.
+Tomemos este componente contador como ejemplo.
 
 <div class="composition-api">
 

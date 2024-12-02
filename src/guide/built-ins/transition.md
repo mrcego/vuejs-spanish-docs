@@ -581,7 +581,7 @@ Esto puede ser útil cuando has definido transiciones / animaciones CSS utilizan
 
 También puedes aplicar diferentes comportamientos en los hooks transition de JavaScript basados en el estado actual de tu componente. Finalmente, la última forma de crear transiciones dinámicas es a través de [componentes de transición reutilizables](#transiciones-reutilizables) que aceptan props para cambiar la naturaleza de la(s) transición(es) a utilizar. Puede sonar cursi, pero el único límite realmente es tu imaginación.
 
-## Transiciones con la Propiedad Key {#transiciones-con-la-propiedad-key}
+## Transiciones con la Propiedad Key {#transitions-with-the-key-attribute}
 
 A veces necesitas forzar el re-render de un elemento del DOM para que se produzca una transición.
 

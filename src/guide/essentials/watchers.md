@@ -272,6 +272,41 @@ watch(
 
 </div>
 
+## Watchers "Únicos" <sup class="vt-badge" data-text="3.4+" /> {#once-watchers}
+
+El callback de un watcher se ejecutará cada vez que cambie la fuente observada. Si quieres que el callback se active sólo una vez cuando la fuente cambie, usa la opción `once: true`.
+
+<div class="options-api">
+  
+```js
+export default {
+  watch: {
+    source: {
+      handler(newValue, oldValue) {
+        // se ejecuta sólo una vez cuando `source` cambia
+      },
+      once: true
+    }
+  }
+}
+```
+
+</div>
+
+<div class="composition-api">
+
+```js
+watch(
+  source,
+  (newValue, oldValue) => {
+    // se ejecuta sólo una vez cuando `source` cambia
+  },
+  { once: true }
+)
+```
+
+</div>
+
 <div class="composition-api">
 
 ## `watchEffect()` \*\* {#watcheffect}

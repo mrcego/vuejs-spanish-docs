@@ -18,7 +18,9 @@ Se llama cuando se inicializa la instancia.
 
 - **Detalles**
 
-  Se llama inmediatamente cuando se inicializa la instancia, después de la resolución de propiedades (props), antes de procesar otras opciones como `data()` o `computed`.
+  Se llama inmediatamente cuando la instancia se inicializa y las props se resuelven.
+
+  Luego, las props se definirán como propiedades reactivas y el estado como `data()` o `computed` se configurará.
 
   Tenga en cuenta que el hook `setup()` de la Composition API se llama antes de cualquier hook de la Options API, incluso antes de `beforeCreate()`.
 

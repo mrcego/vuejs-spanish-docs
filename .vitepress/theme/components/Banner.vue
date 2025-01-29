@@ -13,7 +13,6 @@ const open = ref(true)
 /**
  * Invoca esto si el banner es descartable
  */
-
 function dismiss() {
   open.value = false
   document.documentElement.classList.add('banner-dismissed')
@@ -73,6 +72,7 @@ html:not(.banner-dismissed) {
 
 .banner-dismissed .banner {
   display: none;
+
 }
 
 a:hover {

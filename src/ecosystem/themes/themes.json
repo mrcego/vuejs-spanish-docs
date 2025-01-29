@@ -7,42 +7,42 @@
       {
         "name": "Vue Argon Design System",
         "price": 0,
-        "description": "Free Vue.js Design System",
+        "description": "Sistema de Diseño Vue.js Gratuito",
         "url": "https://www.creative-tim.com/product/vue-argon-design-system?affiliate_id=116187",
         "image": "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-design-system/vue-argon-design-system.jpg"
       },
       {
         "name": "Vue Black Dashboard Pro",
         "price": 59,
-        "description": "Premium Vue.js Admin Template",
+        "description": "Plantilla Admin Premium Vue.js",
         "url": "https://www.creative-tim.com/product/vue-black-dashboard-pro?affiliate_id=116187",
         "image": "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-black-dashboard-pro/vue-black-dashboard-pro.jpg"
       },
       {
         "name": "Vue Paper Dashboard 2 Pro",
         "price": 59,
-        "description": "Premium Vue.js Admin Template",
+        "description": "Plantilla Admin Vue.js Premium",
         "url": "https://www.creative-tim.com/product/vue-paper-dashboard-2-pro?affiliate_id=116187",
         "image": "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-black-dashboard-pro/vue-black-dashboard-pro.jpg"
       },
       {
         "name": "Vue Material Kit",
         "price": 0,
-        "description": "Free Vue.js UI Kit",
+        "description": "Kit de interfaz de usuario  Vue.js Gratuito",
         "url": "https://www.creative-tim.com/product/vue-material-kit?affiliate_id=116187",
         "image": "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-material-kit/vue-material-kit.jpg"
       },
       {
         "name": "Vue Black Dashboard",
         "price": 0,
-        "description": "Free Vue.js Admin Template",
+        "description": "Plantilla Admin Vue.js Gratuita",
         "url": "https://www.creative-tim.com/product/vue-black-dashboard?affiliate_id=116187",
         "image": "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-black-dashboard/vue-black-dashboard.jpg"
       },
       {
         "name": "Vue Now UI Kit Pro",
         "price": 79,
-        "description": "Premium Vue.js UI Kit",
+        "description": "Kit de interfaz de usuario  Vue.js Premium",
         "url": "https://www.creative-tim.com/product/vue-now-ui-kit-pro?affiliate_id=116187",
         "image": "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-now-ui-kit-pro/vue-now-ui-kit-pro.jpg"
       }
@@ -56,42 +56,42 @@
       {
         "url": "https://mdbootstrap.com/docs/vue/pro/?utm_ref_id=82665",
         "name": "Vue Material Bootstrap Pro",
-        "description": "Premium Vue.js UI Kit",
+        "description": "Kit de interfaz de usuario Vue.js Premium",
         "image": "https://mdbootstrap.com/img/Marketing/mdb-press-pack/vuejs/ui-kit.jpg",
         "price": 199
       },
       {
         "url": "https://mdbootstrap.com/docs/vue/?utm_ref_id=82665",
         "name": "Vue Material Bootstrap Kit",
-        "description": "Free Vue.js UI Kit",
+        "description": "Kit de interfaz de usuario Vue.js Gratuito",
         "image": "https://mdbootstrap.com/img/Marketing/mdb-press-pack/vuejs/ui-kit.jpg",
         "price": 0
       },
       {
         "url": "https://mdbootstrap.com/docs/vue/templates/admin-dashboard/?utm_ref_id=82665",
-        "name": " Vue Admin Bootstrap Pro",
-        "description": "Premium Vue.js Templates Pack",
+        "name": "Vue Admin Bootstrap Pro",
+        "description": "Paquete de Plantillas Vue.js Premium",
         "image": "https://mdbootstrap.com/img/Marketing/mdb-press-pack/vuejs/admin-pack.jpg",
         "price": 199
       },
       {
         "url": "https://mdbootstrap.com/freebies/vue/admin-dashboard?utm_ref_id=82665",
         "name": "Vue Admin Bootstrap",
-        "description": "Free Vue.js Templates Pack",
+        "description": "Paquete de Plantillas Vue.js Gratuitas",
         "image": "https://mdbootstrap.com/img/Marketing/mdb-press-pack/vuejs/admin-pack.jpg",
         "price": 0
       },
       {
         "url": "https://mdbootstrap.com/docs/vue/plugins/calendar/?utm_ref_id=82665",
         "name": "Vue Calendar Bootstrap",
-        "description": "Premium Vue.js Plugin",
+        "description": "Plugin Vue.js Premium",
         "image": "https://mdbootstrap.com/img/Marketing/mdb-press-pack/vuejs/plugins/calendar.jpg",
         "price": 199
       },
       {
         "url": "https://mdbootstrap.com/docs/vue/plugins/color-picker/?utm_ref_id=82665",
         "name": "Vue Color Picker Bootstrap",
-        "description": "Premium Vue.js Plugin",
+        "description": "Plugin Vue.js Premium",
         "image": "https://mdbootstrap.com/img/Marketing/mdb-press-pack/vuejs/plugins/color-picker.jpg",
         "price": 199
       }
@@ -105,42 +105,42 @@
       {
         "name": "Sakai",
         "price": 0,
-        "description": "Free Admin Template",
+        "description": "Plantilla Admin Gratuita",
         "url": "https://www.primefaces.org/sakai-vue/#/?af_id=4218",
         "image": "https://www.primefaces.org/vue-templates/sakai.jpg"
       },
       {
         "name": "Atlantis",
         "price": 59,
-        "description": "Premium Admin Template",
+        "description": "Plantilla Admin Premium",
         "url": "https://www.primefaces.org/layouts/atlantis-vue?af_id=4218",
         "image": "https://www.primefaces.org/vue-templates/atlantis.jpg"
       },
       {
         "name": "Apollo",
         "price": 59,
-        "description": "Next-Gen Application Template",
+        "description": "Plantilla de Aplicación Next-Gen",
         "url": "https://www.primefaces.org/layouts/apollo-vue?af_id=4218",
         "image": "https://www.primefaces.org/vue-templates/apollo.jpg"
       },
       {
         "name": "Freya",
         "price": 59,
-        "description": "Premium Admin Template",
+        "description": "Plantilla Admin Premium",
         "url": "https://www.primefaces.org/layouts/freya-vue?af_id=4218",
         "image": "https://www.primefaces.org/vue-templates/freya.jpg"
       },
       {
         "name": "Ultima",
         "price": 79,
-        "description": "Material Design Admin Template",
+        "description": "Plantilla Admin con Material Design",
         "url": "https://www.primefaces.org/layouts/ultima-vue?af_id=4218",
         "image": "https://www.primefaces.org/vue-templates/ultima.jpg"
       },
       {
         "name": "Diamond",
         "price": 59,
-        "description": "PrimeOne Design Admin Template",
+        "description": "Plantilla Admin Diseño PrimeOne",
         "url": "https://www.primefaces.org/layouts/diamond-vue?af_id=4218",
         "image": "https://www.primefaces.org/vue-templates/diamond.jpg"
       }
@@ -154,42 +154,42 @@
       {
         "name": "Sing App Vue",
         "price": 99,
-        "description": "Vue Admin Dashboard Template",
+        "description": "Plantilla de Panel de Administración Vue",
         "url": "https://flatlogic.com/templates/sing-app-vue?ref=x-fdkuTAVW",
         "image": "https://flatlogic.com/assets/templates/sing_vue_full-cb6b9fdd0465a0d60c0fafa2deca1929cc4966957c8e1ce57565a5e2f45ff043.webp"
       },
       {
         "name": "Sing App Vue Node.js",
         "price": 149,
-        "description": "Vue Admin Dashboard Template with Node.JS Backend",
+        "description": "Plantilla de Panel de Administración Vue con Backend en Node.JS",
         "url": "https://flatlogic.com/templates/sing-app-vue-node-js?ref=x-fdkuTAVW",
         "image": "https://flatlogic.com/assets/templates/sing_vue_full_nodejs-78af09220a2d085fec9bbc1071879915b30737f25d72669152f3b090291609aa.webp"
       },
       {
         "name": "Light Blue Vue",
         "price": 99,
-        "description": "Vue Admin Dashboard Template",
+        "description": "Plantilla de Panel de Administración Vue",
         "url": "https://flatlogic.com/templates/light-blue-vue?ref=x-fdkuTAVW",
         "image": "https://flatlogic.com/assets/templates/light_blue_vue_full-e044d30242912d5756b190e576bf30ea967b725c09d2e371a7eabf1c6a9c33b2.webp"
       },
       {
         "name": "Light Blue Vue Admin",
         "price": 0,
-        "description": "Free and Open Source Vue JS Template for Admin Dashboard",
+        "description": "Plantilla Vue JS Gratuita y de Código Abierto para Panel de Administración",
         "url": "https://flatlogic.com/templates/light-blue-vue-lite?ref=x-fdkuTAVW",
         "image": "https://flatlogic.com/assets/templates/light_blue_vue_lite-c1937a2a01e5e8e8ede29a3ead011126e9dab5c58b9017daefe36411f9a1089e.webp"
       },
       {
         "name": "Sing App Vue Dashboard",
         "price": 0,
-        "description": "Free and Open Source Vue.js Admin Dashboard Template",
+        "description": "Plantilla Vue.js Gratuita y de Código Abierto para Panel de Administración",
         "url": "https://flatlogic.com/templates/sing-app-vue-dashboard?ref=x-fdkuTAVW",
         "image": "https://flatlogic.com/assets/templates/sing_vue_lite-ae3ec037404bc9ae29599a16afe276e638bd916713d75946c604feb69323ec21.webp"
       },
       {
         "name": "Light Blue Vue Node.js",
         "price": 149,
-        "description": "Vue Admin Template with Node.JS Backend",
+        "description": "Plantilla de Panel de Administración Vue con Backend en Node.JS",
         "url": "https://flatlogic.com/templates/light-blue-vue-node-js?ref=x-fdkuTAVW",
         "image": "https://flatlogic.com/assets/templates/light_blue_vue_full_nodejs-06f941c849f0a83a3c0d38c728101eace06a7515ea048f12bcd91f165280246f.webp"
       }
@@ -203,14 +203,14 @@
       {
         "name": "Spike Free VueJs Admin Template",
         "price": 0,
-        "description": "Free & Open Source VueJs Admin Template",
+        "description": "Plantilla de panel de administración Gratuita y de Código Abierto",
         "url": "https://www.wrappixel.com/templates/spike-free-vuejs-admin-template/?ref=320",
         "image": "https://www.wrappixel.com/wp-content/uploads/edd/2023/10/spike-free-vuetify-vuejs-admin-template-wp.jpg"
       },
       {
         "name": "Spike Vue3 Admin Dashboard",
         "price": 49,
-        "description": "Powerful Vue3 Dashboard Theme",
+        "description": "Poderoso Tema de Dashboard",
         "url": "https://www.wrappixel.com/templates/spike-vuejs-admin-dashboard/?ref=320",
         "image": "https://www.wrappixel.com/wp-content/uploads/edd/2023/09/spike-vuejs-admin-dashboard-prev-img.jpg"
       },
@@ -224,14 +224,14 @@
       {
         "name": "Free MaterialPro Vuetify Admin",
         "price": 0,
-        "description": "Free Vuetify Dashboard Template",
+        "description": "Plantilla de Dashboard Gratuita",
         "url": "https://www.wrappixel.com/templates/materialpro-vuetify-admin-lite/?ref=320",
         "image": "https://www.wrappixel.com/wp-content/uploads/edd/2020/05/materialpro-vuejs-lite-admin-wp-20.jpg"
       },
       {
         "name": "Free AdminPro VueJs Lite",
         "price": 0,
-        "description": "Free & Open Source VueJs Admin Template",
+        "description": "Plantilla de Admin Gratis y de Código Abierto",
         "url": "https://www.wrappixel.com/templates/adminpro-vuetify-admin-lite/?ref=320",
         "image": "https://www.wrappixel.com/wp-content/uploads/edd/2020/11/feature_image.jpg"
       },
@@ -252,35 +252,35 @@
       {
         "name": "Free Berry Vuetify VueJs Admin Template",
         "price": 0,
-        "description": "Free & Open Source VueJs Admin Template with well known desing of Berry",
+        "description": "Plantilla de Administrador VueJs Gratuita y de Código Abierto con el reconocido diseño de Berry",
         "url": "https://codedthemes.com/item/berry-free-vuetify-vuejs-admin-template/?ref=evan.vuejs",
         "image": "https://codedthemes.com/wp-content/uploads/2024/03/Berry-free-vue.png"
       },
       {
         "name": "Berry Vue3 Admin Dashboard",
         "price": 59,
-        "description": "Discover our visually captivating Vue 3 Dashboard Theme!",
+        "description": "¡Descubre nuestro cautivador Tema de Dashboard Vue 3!",
         "url": "https://codedthemes.com/item/berry-vue-admin-dashboard/?ref=evan.vuejs",
         "image": "https://codedthemes.com/wp-content/uploads/2024/03/Berry-pro-vue.png"
       },
       {
         "name": "Mantis Vue3 Admin Dashboard",
         "price": 59,
-        "description": "Simple yet rebust to start any development with latest VueJs and Vuetify",
+        "description": "Sencillo pero robusto para comenzar cualquier desarrollo con el último VueJs y Vuetify",
         "url": "https://codedthemes.com/item/mantis-vue-admin-template/?ref=evan.vuejs",
         "image": "https://codedthemes.com/wp-content/uploads/2024/03/Mantis-pro-vue.png"
       },
       {
         "name": "Free Mantis Vuetify VueJs Admin Template",
         "price": 0,
-        "description": "Free Vuetify Dashboard Template with simplest design and code",
+        "description": "Plantilla de Dashboard Vuetify Gratuita con el diseño y código más simple",
         "url": "https://codedthemes.com/item/mantis-free-vuetify-vuejs-admin-template/?ref=evan.vuejs",
         "image": "https://codedthemes.com/wp-content/uploads/2024/03/Mantis-free-vue.png"
       },
       {
         "name": "Free Able Pro VueJs",
         "price": 0,
-        "description": "Free & Open Source Able pro VueJs Admin Template",
+        "description": "Plantilla de Administrador Able Pro VueJs Gratuita y de Código Abierto",
         "url": "https://codedthemes.com/item/able-pro-free-vuejs-admin-dashboard/?ref=evan.vuejs",
         "image": "https://codedthemes.com/wp-content/uploads/2024/03/Able-pro-free-vue.png"
       },
